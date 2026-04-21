@@ -1,0 +1,315 @@
+.contact {
+  position: relative;
+  width: 100vw;
+  height: 100vh; /* Force exactly viewport height */
+  padding: 2em; /* Reduced from 4em 2em */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg);
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+.contact-card-dark {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 40px;
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 40px; /* Reduced from 50px */
+  gap: 40px; /* Reduced from 60px */
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-left-impressive {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px; /* Reduced from 30px */
+  position: relative;
+  z-index: 2;
+}
+
+.impressive-text h3 {
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--accent2);
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+}
+
+.impressive-text h1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 3.5rem; /* Reduced from 4.5rem */
+  line-height: 1.1;
+  font-weight: 800;
+  color: var(--fg);
+  text-transform: none;
+  margin: 0;
+}
+
+.impressive-text .gradient-text {
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-style: italic;
+}
+
+.impressive-subtext {
+  max-width: 85%;
+}
+
+.impressive-subtext p {
+  font-size: 1rem; /* Reduced from 1.1rem */
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+}
+
+.contact-direct {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  margin-top: 20px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.direct-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.direct-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent1);
+}
+
+.direct-item a, .direct-item span:not(.direct-label) {
+  font-size: 1rem; /* Reduced from 1.1rem */
+  font-weight: 500;
+  color: var(--fg);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.direct-item a:hover {
+  color: var(--accent2);
+  transform: translateX(5px);
+}
+
+.contact-right-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  z-index: 2;
+}
+
+.form-title {
+  display: none; /* Removed redundant title as left side is bold enough */
+}
+
+.contact-form-ui {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Reduced from 20px */
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px; /* More modern than massive pills */
+  padding: 0 15px; /* Reduced from 20px */
+  height: 55px; /* Reduced from 65px */
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.input-wrapper:focus-within {
+  border-color: var(--accent1);
+  box-shadow: 0 10px 30px rgba(108, 99, 255, 0.15);
+  background: rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+.input-wrapper.text-wrapper {
+  height: auto;
+  padding: 15px; /* Reduced from 20px */
+  align-items: flex-start;
+}
+
+.input-icon {
+  width: 22px;
+  height: 22px;
+  stroke: rgba(255, 255, 255, 0.3);
+  margin-right: 15px;
+  flex-shrink: 0;
+  transition: stroke 0.3s ease;
+}
+
+.input-wrapper:focus-within .input-icon {
+  stroke: var(--accent2);
+}
+
+.input-wrapper input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  color: var(--fg);
+  outline: none;
+  font-family: inherit;
+  font-size: 0.95rem; /* Reduced from 1.05rem */
+  font-weight: 400;
+}
+
+.input-wrapper input::placeholder,
+.input-wrapper textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: 400;
+}
+
+.input-wrapper textarea {
+  border: none;
+  background: transparent;
+  width: 100%;
+  min-height: 100px; /* Reduced from 140px */
+  color: var(--fg);
+  outline: none;
+  resize: none;
+  font-family: inherit;
+  font-size: 0.95rem; /* Reduced from 1.05rem */
+  font-weight: 400;
+}
+
+.submit-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--fg);
+  border-radius: 20px;
+  height: 55px; 
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.1rem; 
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.submit-btn:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(108, 99, 255, 0.4);
+  box-shadow: 0 15px 30px rgba(108, 99, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.submit-btn:active {
+  transform: translateY(1px);
+}
+
+.success-message.show {
+  opacity: 1 !important;
+}
+
+.or-separator {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.8rem; /* Reduced from 0.9rem */
+  margin: 5px 0; /* Reduced from 10px 0 */
+  font-family: "JetBrains Mono", monospace;
+  text-transform: uppercase;
+}
+
+.social-circles {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-circle {
+  width: 45px; /* Reduced from 55px */
+  height: 45px; /* Reduced from 55px */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.social-circle svg {
+  width: 18px; /* Reduced from 22px */
+  height: 18px; /* Reduced from 22px */
+  fill: var(--fg);
+  transition: all 0.3s;
+}
+
+.social-circle:hover {
+  transform: translateY(-5px);
+  background: var(--bg2);
+  border-color: var(--accent1);
+  box-shadow: 0 15px 30px rgba(108, 99, 255, 0.3);
+}
+
+.social-circle:hover svg {
+  fill: var(--accent1);
+}
+
+/* Fix trail images so they flow BEHIND the frosted glass form card! */
+.contact .trail-img {
+  position: absolute;
+  width: 80px;
+  height: 100px;
+  border-radius: 12px;
+  object-fit: cover;
+  pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  /* The secret sauce: z-index 0 puts it behind the z-index 10 contact card */
+  z-index: 0;
+  opacity: 0.6;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@media (max-width: 900px) {
+  .contact-card-dark {
+    grid-template-columns: 1fr;
+    padding: 30px;
+    gap: 40px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+  
+  .impressive-text h1 {
+    font-size: 3.5rem;
+  }
+}

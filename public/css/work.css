@@ -1,0 +1,263 @@
+/* Premium Work Header Redesign */
+.work-header {
+  position: relative;
+  width: 100vw;
+  height: 100svh;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background: radial-gradient(circle at center, rgba(108, 99, 255, 0.1) 0%, transparent 60%);
+}
+
+.work-header .work-header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  z-index: 2;
+}
+
+.work-header .work-profile-icon {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 1em;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 30px rgba(108, 99, 255, 0.6);
+  overflow: hidden;
+  animation: profileFloat 6s ease-in-out infinite;
+}
+
+.work-header .work-profile-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes profileFloat {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.work-header .work-header-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.work-header .work-header-title h1 {
+  font-size: clamp(5rem, 15vw, 13rem);
+  line-height: 0.85;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin: 0;
+}
+
+.work-header .work-header-title h1:last-child {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.3);
+  color: transparent;
+  margin-left: 15vw; /* Create a staggered diagonal align */
+}
+
+.work-header .work-header-title h1:first-child {
+  margin-right: 15vw;
+}
+
+.work-header .work-header-content p.mn {
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.25em 2.5em;
+  border-radius: 3em;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  margin-top: 3em;
+}
+  
+  .work-header .work-footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .work-header .work-footer .work-footer-scroll-down {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .work-header .work-footer .work-footer-symbols {
+    height: 1rem;
+  }
+  
+  /* Staggered Awwwards Layout */
+  .work-items {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    padding: 4em 4em;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 8em;
+    max-width: 1600px;
+    margin: 0 auto 8em auto;
+  }
+  
+  .work-items .row {
+    display: flex;
+    gap: 4em;
+    align-items: center;
+  }
+
+  /* Make rows alternate sizes for masonry feel */
+  .work-items .row:nth-child(odd) .work-item:first-child {
+    flex: 1.5;
+  }
+  .work-items .row:nth-child(odd) .work-item:last-child {
+    flex: 1;
+    margin-top: 6em; /* offset downwards */
+  }
+
+  .work-items .row:nth-child(even) .work-item:first-child {
+    flex: 1;
+    margin-top: -6em; /* offset upwards */
+  }
+  .work-items .row:nth-child(even) .work-item:last-child {
+    flex: 1.5;
+  }
+
+  .work-items .row .work-item {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .work-items .row .work-item .work-item-img {
+    position: relative;
+    aspect-ratio: 16/10;
+    border-radius: 1em;
+    overflow: hidden;
+    margin-bottom: 2em;
+    background-color: var(--bg2);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5); /* deep luxury shadow */
+  }
+
+  .work-items .row .work-item .work-item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .work-items .row .work-item:hover .work-item-img img {
+    transform: scale(1.08); /* Stronger scale on hover */
+  }
+
+  /* Overlay Glow */
+  .work-items .row .work-item .work-item-img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inset 0 0 40px rgba(255,255,255,0.05);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);
+    pointer-events: none;
+    border-radius: 1em;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+  }
+
+  .work-items .row .work-item:hover .work-item-img::after {
+    opacity: 1;
+  }
+  
+  .work-items .row .work-item .work-item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 0 1em; /* give text some breathing room from edges */
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .work-items .row .work-item:hover .work-item-content {
+    transform: translateX(10px);
+  }
+
+  /* Update typography */
+  .work-item-content h2 {
+    font-size: clamp(2rem, 3vw, 3.5rem);
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    margin: 0;
+    color: var(--fg);
+    transition: color 0.4s ease;
+  }
+
+  .work-items .row .work-item:hover .work-item-content h2 {
+    color: var(--accent1);
+  }
+
+  .work-item-content .work-item-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1em;
+    margin-top: 1em;
+  }
+
+  .work-item-content p.mn {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+  }
+  
+  .work-header-content p,
+  .work-header-title h1 {
+    line-height: 1.1;
+  }
+  
+  .work-header-content p > div,
+  .work-header-title h1 > div {
+    position: relative;
+    padding: 0 0.25em;
+  }
+  
+  @media (max-width: 1000px) {
+    .work-header .work-footer .work-footer-symbols {
+      display: none;
+    }
+  
+    .work-header .work-footer {
+      display: flex;
+      justify-content: flex-end;
+    }
+  
+    .work-header .work-footer .work-footer-scroll-down {
+      left: 2em;
+      transform: translateX(0%);
+    }
+  
+    .work-items .row {
+      flex-direction: column;
+    }
+  }
+  
