@@ -21,18 +21,7 @@ body {
   position: relative;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
-  opacity: 0.05;
-  pointer-events: none;
-  z-index: 9999;
-}
+/* Noise overlay removed — was causing mat/grain texture effect */
 
 .scroll-progress {
   position: fixed;
@@ -165,7 +154,7 @@ p.mn {
   z-index: 2;
 }
 
-.contact-cta .contact-text-large h1 {
+.contact-cta .contact-text-large .contact-cta-heading {
   font-family: var(--font-hero);
   font-size: clamp(3rem, 8vw, 6.5rem);
   font-weight: 800;
@@ -176,9 +165,10 @@ p.mn {
   line-height: 1;
   text-align: center;
   transition: all 0.5s ease;
+  text-transform: uppercase;
 }
 
-.contact-cta .contact-button:hover .contact-text-large h1 {
+.contact-cta .contact-button:hover .contact-text-large .contact-cta-heading {
   background: linear-gradient(180deg, #ffffff 0%, var(--accent1) 150%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -219,7 +209,7 @@ p.mn {
     border-radius: 40px;
   }
   
-  .contact-cta .contact-text-large h1 {
+  .contact-cta .contact-text-large .contact-cta-heading {
     font-size: 3.5rem;
   }
 }
@@ -271,7 +261,7 @@ p.mn {
     text-align: center;
   }
 
-  .contact-cta .contact-text-large h1 {
+  .contact-cta .contact-text-large .contact-cta-heading {
     font-size: 3rem;
   }
 }

@@ -12,7 +12,7 @@ export default function init() {
     return;
   }
 
-  const counterElement = document.querySelector(".preloader-counter h1");
+  const counterElement = document.querySelector(".preloader-counter h2, .preloader-counter h1");
   const fillElement = document.querySelector(".preloader-fill");
   const barElement = document.querySelector(".preloader-bar");
 

@@ -33,15 +33,16 @@ export default function Work() {
       <Navbar />
 
       <div className="page work-page">
+        <h1 className="sr-only">Selected Works — Anmol Malviya</h1>
 
         <section className="work-header">
             <div className="work-header-content">
                 <div className="work-profile-icon">
-                    <img src="/images/services-header/profile-new.jpeg" alt="Anmol Malviya Portrait" />
+                    <img src="/profile.jpeg" alt="Anmol Malviya Portrait" />
                 </div>
                 <div className="work-header-title">
-                    <h1>Selected</h1>
-                    <h1>Works</h1>
+                    <p className="header-fill">Selected</p>
+                    <p className="header-outline">Works</p>
                 </div>
                 <p className="mn">A collection of projects that define my journey</p>
             </div>
@@ -60,7 +61,7 @@ export default function Work() {
             <div className="row">
                 <div className="work-item">
                     <div className="work-item-img">
-                        <img src="/images/projects/project-1.png" alt="Project 1" />
+                        <img src="/images/projects/project-1.png" alt="Anmol Malviya - Interactive Portfolio built with Next.js and GSAP" loading="lazy" />
                     </div>
                     <div className="work-item-content">
                         <h2>Interactive Portfolio</h2>
@@ -72,7 +73,7 @@ export default function Work() {
                 </div>
                 <div className="work-item">
                     <div className="work-item-img">
-                        <img src="/images/projects/project-2.png" alt="Project 2" />
+                        <img src="/images/projects/project-2.png" alt="Vyorai AI Interviewer - Full-Stack AI App by Anmol Malviya" loading="lazy" />
                     </div>
                     <div className="work-item-content">
                         <h2>Vyorai AI Interviewer</h2>
@@ -87,7 +88,7 @@ export default function Work() {
             <div className="row">
                 <div className="work-item">
                     <div className="work-item-img">
-                        <img src="/images/projects/project-3.png" alt="Project 3" />
+                        <img src="/images/projects/project-3.png" alt="TaskFlow Data Dashboard Web Design by Anmol Malviya" loading="lazy" />
                     </div>
                     <div className="work-item-content">
                         <h2>TaskFlow Dashboard</h2>
@@ -99,7 +100,7 @@ export default function Work() {
                 </div>
                 <div className="work-item">
                     <div className="work-item-img">
-                        <img src="/images/projects/project-4.png" alt="Project 4" />
+                        <img src="/images/projects/project-4.png" alt="React and Node.js E-Commerce Platform by Anmol Malviya" loading="lazy" />
                     </div>
                     <div className="work-item-content">
                         <h2>E-Commerce Platform</h2>
@@ -114,7 +115,7 @@ export default function Work() {
             <div className="row">
                 <div className="work-item">
                     <div className="work-item-img">
-                        <img src="/images/projects/project-5.png" alt="Project 5" />
+                        <img src="/images/projects/project-5.png" alt="UI/UX Branding for Creative Agency by Anmol Malviya" loading="lazy" />
                     </div>
                     <div className="work-item-content">
                         <h2>Creative Agency</h2>
@@ -126,7 +127,7 @@ export default function Work() {
                 </div>
                 <div className="work-item">
                     <div className="work-item-img">
-                        <img src="/images/projects/project-6.png" alt="Project 6" />
+                        <img src="/images/projects/project-6.png" alt="Mobile Web3 FinTech App Development by Anmol Malviya" loading="lazy" />
                     </div>
                     <div className="work-item-content">
                         <h2>FinTech App</h2>
@@ -141,7 +142,7 @@ export default function Work() {
             <div className="row">
                 <div className="work-item">
                     <div className="work-item-img">
-                        <img src="/images/projects/project-7.png" alt="Project 7" />
+                        <img src="/images/projects/project-7.png" alt="System Architecture for Social Connect App by Anmol Malviya" loading="lazy" />
                     </div>
                     <div className="work-item-content">
                         <h2>Social Connect</h2>
@@ -153,7 +154,7 @@ export default function Work() {
                 </div>
                 <div className="work-item">
                     <div className="work-item-img">
-                        <img src="/images/projects/project-8.png" alt="Project 8" />
+                        <img src="/images/projects/project-8.png" alt="Graphic Design and Brand Identity by Anmol Malviya" loading="lazy" />
                     </div>
                     <div className="work-item-content">
                         <h2>Brand Identity</h2>

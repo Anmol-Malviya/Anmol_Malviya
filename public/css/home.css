@@ -16,9 +16,13 @@
   overflow-x: hidden;
 }
 
-.hero .hero-header h1 {
+.hero .hero-header .hero-name-word {
   font-size: 18vw;
   line-height: 0.9;
+  font-family: "Space Grotesk", sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: -0.02em;
 }
 
 .hero .hero-header.hero-header-1 {
@@ -126,9 +130,15 @@
   display: none;
 }
 
-.featured-work .featured-title-wrapper h1 {
+.featured-work .featured-title-wrapper .featured-title {
   text-align: center;
   transform: translateY(-0.5em);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(3rem, 10vw, 8rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  line-height: 0.95;
 }
 
 .featured-work .featured-images {
@@ -308,6 +318,16 @@
   margin-bottom: 6em;
 }
 
+/* Services headline — styled like a heading */
+.services-headline {
+  font-family: "Space Grotesk", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+}
+
 /* home - services */
 .services .service-card {
   position: relative;
@@ -332,6 +352,16 @@
   display: flex;
   flex-direction: column;
   gap: 2em;
+}
+
+/* Services card title — styled like a heading */
+.services-card-title {
+  font-family: "Space Grotesk", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  font-size: clamp(3rem, 10vw, 8rem);
 }
 
 .services .service-card-img {

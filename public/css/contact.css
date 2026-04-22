@@ -38,7 +38,7 @@
   z-index: 2;
 }
 
-.impressive-text h3 {
+.impressive-text h2 {
   font-family: "Space Grotesk", sans-serif;
   color: var(--accent2);
   font-size: 1.5rem;
@@ -47,9 +47,10 @@
   margin-bottom: 0.5em;
 }
 
-.impressive-text h1 {
+.impressive-text .contact-glitch-word,
+.impressive-text .contact-gradient-word {
   font-family: "Space Grotesk", sans-serif;
-  font-size: 3.5rem; /* Reduced from 4.5rem */
+  font-size: 3.5rem;
   line-height: 1.1;
   font-weight: 800;
   color: var(--fg);
@@ -120,7 +121,11 @@
 }
 
 .form-title {
-  display: none; /* Removed redundant title as left side is bold enough */
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  color: var(--accent1);
+  opacity: 0.8;
+  margin-bottom: 0.25em;
 }
 
 .contact-form-ui {
@@ -228,8 +233,35 @@
   transform: translateY(1px);
 }
 
-.success-message.show {
-  opacity: 1 !important;
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.form-status-msg {
+  text-align: center;
+  padding: 0.75em;
+  border-radius: 10px;
+  margin-top: 0.5em;
+  animation: fadeIn 0.3s ease;
+}
+
+.form-success {
+  color: var(--accent2);
+  background: rgba(0, 212, 170, 0.08);
+  border: 1px solid rgba(0, 212, 170, 0.2);
+}
+
+.form-error {
+  color: var(--accent3);
+  background: rgba(255, 107, 157, 0.08);
+  border: 1px solid rgba(255, 107, 157, 0.2);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .or-separator {
@@ -309,7 +341,8 @@
     backdrop-filter: none;
   }
   
-  .impressive-text h1 {
+  .impressive-text .contact-glitch-word,
+  .impressive-text .contact-gradient-word {
     font-size: 3.5rem;
   }
 }

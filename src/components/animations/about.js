@@ -67,7 +67,7 @@ export default function init() {
     const aboutNinjaStarContainer = document.querySelector(".about-ninja-star-container");
     const aboutNinjaStar = document.querySelector(".about-ninja-star");
     const aboutHeroPortrait = document.querySelector(".about-hero-portrait");
-    const aboutHeroHeaders = document.querySelectorAll(".about-hero-header h1");
+    const aboutHeroHeaders = document.querySelectorAll(".about-hero-header h1, .about-hero-header p");
     const aboutBioText = document.querySelector(".about-hero-bio");
 
     if (aboutNinjaStar && aboutNinjaStarContainer) {

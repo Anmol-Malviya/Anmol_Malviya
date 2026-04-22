@@ -28,6 +28,16 @@
   align-items: flex-end;
 }
 
+/* Reset heading size so it inherits the counter's font-size */
+.preloader-counter h1,
+.preloader-counter h2 {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  line-height: 1;
+  -webkit-text-stroke: inherit;
+}
+
 .preloader-counter span {
   font-size: 3rem;
   margin-bottom: 1.2rem;

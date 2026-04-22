@@ -35,6 +35,7 @@ export default function About() {
       <Navbar />
 
       <div className="page about-page">
+        <h1 className="sr-only">About Anmol Malviya - Full Stack Developer</h1>
 
         {/* About Hero */}
         <section className="about-hero">
@@ -60,8 +61,8 @@ export default function About() {
 
           {/* Hero Header */}
           <div className="about-hero-header">
-            <h1>Anmol</h1>
-            <h1 className="header-outline">Malviya</h1>
+            <p className="header-fill">Anmol</p>
+            <p className="header-outline">Malviya</p>
           </div>
 
           {/* Main Content */}
@@ -71,16 +72,16 @@ export default function About() {
             <div className="about-hero-bio">
               <p className="mn">// Full-Stack Developer & UI/UX Designer</p>
               <p className="ss">
-                I craft digital experiences that live at the intersection of
-                engineering precision and visual storytelling. With a deep
-                passion for cutting-edge technology and a designer&apos;s eye for
-                detail, I transform complex ideas into elegant, performant web
-                applications.
+                Hello, I am Anmol Malviya, a dedicated Full Stack Developer and UI/UX Designer based in India. My professional journey is defined by a relentless pursuit of crafting award-winning digital experiences that seamlessly blend engineering precision with compelling visual storytelling. As a specialized React Developer and Next.js expert, I architect robust, highly performant front-end systems that prioritize user experience, accessibility, and modern web standards.
               </p>
               <p className="ss">
-                Currently based in India, I specialize in React, Next.js, Node.js,
-                and GSAP animations — building products that are as fast as they
-                are beautiful.
+                In my role as a Node.js Developer, I engineer scalable, secure backend infrastructures that power complex web applications. From conceptualization to deployment, my comprehensive skill set allows me to manage the entire product lifecycle. My portfolio showcases a diverse range of projects where I have leveraged modern technologies like MongoDB, Express, React, and Node.js (MERN stack) alongside cutting-edge animation libraries like GSAP to deliver interactive, immersive websites.
+              </p>
+              <p className="ss">
+                My approach to development is heavily focused on creating scalable architectures and optimizing performance. As a React Developer, I am adept at state management, component composition, and server-side rendering with Next.js to ensure lightning-fast page loads and superior search engine visibility. On the backend, my experience as a Node.js Developer enables me to design RESTful APIs, manage databases efficiently, and implement secure authentication protocols.
+              </p>
+              <p className="ss">
+                Beyond writing clean, maintainable code, I possess a deep passion for UI/UX design. I believe that exceptional software should not only function flawlessly but also delight users with intuitive interfaces and striking aesthetics. Whether I am optimizing core web vitals for SEO, building responsive layouts, or implementing intricate micro-interactions, my goal is always to create digital products that leave a lasting impact. If you are looking for a Full Stack Developer who bridges the gap between technical excellence and creative design, welcome to my portfolio. Let&apos;s build something extraordinary together.
               </p>
               <div className="about-hero-bio-links">
                 <a href="/contact" className="mn">Contact Me →</a>
@@ -93,6 +94,7 @@ export default function About() {
               <img
                 src="/profile.jpeg"
                 alt="Anmol Malviya Portrait"
+                loading="lazy"
               />
             </div>
 

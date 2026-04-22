@@ -63,16 +63,19 @@
   margin-bottom: 2em;
 }
 
-.about-hero .about-hero-header h1 {
+.about-hero .about-hero-header h1,
+.about-hero .about-hero-header p {
   font-size: clamp(5rem, 12vw, 10rem);
   line-height: 0.85;
   letter-spacing: -0.04em;
   text-transform: uppercase;
   font-weight: 900;
   margin: 0;
+  font-family: "Space Grotesk", sans-serif;
 }
 
-.about-hero .about-hero-header h1.header-outline {
+.about-hero .about-hero-header h1.header-outline,
+.about-hero .about-hero-header p.header-outline {
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
   color: transparent;
 }

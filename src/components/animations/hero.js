@@ -30,7 +30,7 @@ export default function init() {
   }, 250);
 
   // Hero Header Entrance Animation
-  const heroHeaders = document.querySelectorAll(".hero-header h1");
+  const heroHeaders = document.querySelectorAll(".hero-header .hero-name-word");
   
   // Wait for the cinematic preloader sequence to map 100% and vanish
   document.addEventListener("preloaderComplete", () => {

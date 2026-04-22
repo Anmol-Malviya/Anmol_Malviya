@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter, Space_Grotesk, Outfit, JetBrains_Mono } from 'next/font/google';
+import Cursor from '@/components/Cursor';
 import './globals.css';
 
 const inter = Inter({
@@ -27,23 +28,23 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://adhritverse.in'),
-  title: 'Anmol Malviya | Full Stack Developer Portfolio',
-  description: 'Anmol Malviya is a Full Stack Developer specializing in React, Node.js, MongoDB, and Next.js. Building award-worthy digital experiences.',
-  keywords: 'Anmol Malviya, Anmol Malviya Developer Portfolio, Full Stack Developer, React, Node.js, MongoDB, Web Developer',
-  authors: [{ name: 'Anmol Malviya', url: 'https://adhritverse.in' }],
+  metadataBase: new URL('https://anmolmalviya7.vercel.app'),
+  title: 'Anmol Malviya | Full Stack Developer | React & Node.js Expert',
+  description: 'Anmol Malviya is a passionate Full Stack Developer specializing in React, Next.js, Node.js, and GSAP animations. I build high-performance, award-worthy digital experiences.',
+  keywords: 'Anmol Malviya, Full Stack Developer, React Developer, Node.js Developer, Portfolio, Web Developer, Next.js, UI/UX Designer, India',
+  authors: [{ name: 'Anmol Malviya', url: 'https://anmolmalviya7.vercel.app' }],
   robots: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
-    url: 'https://adhritverse.in',
-    siteName: 'Anmol Malviya Developer Portfolio',
-    title: 'Anmol Malviya | Full Stack Developer Portfolio',
-    description: 'Anmol Malviya is a Full Stack Developer specializing in React, Node.js, MongoDB, and Next.js. Building award-worthy digital experiences.',
+    url: 'https://anmolmalviya7.vercel.app',
+    siteName: 'Anmol Malviya - Full Stack Developer Portfolio',
+    title: 'Anmol Malviya | Full Stack Developer | React & Node.js Expert',
+    description: 'Anmol Malviya is a passionate Full Stack Developer specializing in React, Next.js, Node.js, and GSAP animations. I build high-performance, award-worthy digital experiences.',
     images: [{
-      url: 'https://adhritverse.in/images/global/og-image.png',
+      url: 'https://anmolmalviya7.vercel.app/images/global/og-image.png',
       width: 1200,
       height: 630,
       alt: 'Anmol Malviya - Full Stack Developer Portfolio'
@@ -54,13 +55,12 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@anmolmalviya',
     creator: '@anmolmalviya',
-    title: 'Anmol Malviya | Full Stack Developer Portfolio',
-    description: 'Anmol Malviya is a Full Stack Developer specializing in React, Node.js, MongoDB, and Next.js. Building award-worthy digital experiences.',
-    images: ['https://adhritverse.in/images/global/og-image.png'],
+    title: 'Anmol Malviya | Full Stack Developer | React & Node.js Expert',
+    description: 'Anmol Malviya is a passionate Full Stack Developer specializing in React, Next.js, Node.js, and GSAP animations. I build high-performance, award-worthy digital experiences.',
+    images: ['https://anmolmalviya7.vercel.app/images/global/og-image.png'],
   }
 };
 
-import Cursor from '@/components/Cursor';
 
 export default function RootLayout({
   children,
@@ -74,18 +74,28 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              "name": "Anmol Malviya",
-              "jobTitle": "Full Stack Developer",
-              "url": "https://adhritverse.in",
-              "sameAs": [
-                "https://www.linkedin.com/in/anmol-malviya27/",
-                "https://github.com/anmol0706",
-                "https://www.instagram.com/anmol_20_7_/?hl=en"
-              ]
-            })
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Anmol Malviya",
+                "jobTitle": "Full Stack Developer",
+                "description": "Anmol Malviya is a Full Stack Developer specializing in React, Next.js, Node.js, and GSAP animations. Building award-worthy digital experiences.",
+                "url": "https://anmolmalviya7.vercel.app",
+                "email": "anmolcloud7@gmail.com",
+                "sameAs": [
+                  "https://www.linkedin.com/in/anmol-malviya27/",
+                  "https://github.com/anmol0706",
+                  "https://www.instagram.com/anmol_20_7_/?hl=en"
+                ]
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "Anmol Malviya Portfolio",
+                "url": "https://anmolmalviya7.vercel.app"
+              }
+            ])
           }}
         />
         {/* Vanilla CSS files from public folder */}

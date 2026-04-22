@@ -42,7 +42,7 @@ export default function Footer() {
         {/* Info Grid */}
         <div className="footer-info-grid">
           <div className="grid-col main-branding">
-            <h1 className="footer-logo">Anmol <span className="text-accent2">✦</span> Malviya</h1>
+            <p className="footer-logo">Anmol <span className="text-accent2">✦</span> Malviya</p>
             <p className="ss text-white/40 max-w-[300px]">
               Crafting high-performance digital experiences through engineering precision and visual storytelling.
             </p>

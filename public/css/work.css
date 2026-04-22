@@ -51,7 +51,8 @@
   align-items: center;
 }
 
-.work-header .work-header-title h1 {
+.work-header .work-header-title h1,
+.work-header .work-header-title p {
   font-size: clamp(5rem, 15vw, 13rem);
   line-height: 0.85;
   letter-spacing: -0.05em;
@@ -60,13 +61,15 @@
   margin: 0;
 }
 
-.work-header .work-header-title h1:last-child {
+.work-header .work-header-title h1:last-child,
+.work-header .work-header-title p:last-child {
   -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.3);
   color: transparent;
   margin-left: 15vw; /* Create a staggered diagonal align */
 }
 
-.work-header .work-header-title h1:first-child {
+.work-header .work-header-title h1:first-child,
+.work-header .work-header-title p:first-child {
   margin-right: 15vw;
 }
 

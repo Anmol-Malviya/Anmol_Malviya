@@ -39,7 +39,7 @@
   padding: 0;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Force hide default OS cursor globally for premium custom cursor experience */
@@ -90,19 +90,7 @@ p.mn {
   font-weight: 500;
 }
 
-/* Grainy Noise Overlay for Premium Feel */
-body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
-  opacity: 0.03;
-  pointer-events: none;
-  z-index: 1000;
-}
+/* Grainy Noise Overlay — handled in public/css/globals.css via body::before */
 
 /* Accessibility */
 .sr-only {
