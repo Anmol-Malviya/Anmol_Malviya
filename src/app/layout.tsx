@@ -33,6 +33,9 @@ export const metadata: Metadata = {
   description: 'Anmol Malviya is a passionate Full Stack Developer specializing in React, Next.js, Node.js, and GSAP animations. I build high-performance, award-worthy digital experiences.',
   keywords: 'Anmol Malviya, Full Stack Developer, React Developer, Node.js Developer, Portfolio, Web Developer, Next.js, UI/UX Designer, India',
   authors: [{ name: 'Anmol Malviya', url: 'https://anmolmalviya7.vercel.app' }],
+  verification: {
+    google: 'TH_MmR7Bfz5qgOo27MXovphsxCFVLL8MiGul1PwH790',
+  },
   robots: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
   alternates: {
     canonical: '/',
