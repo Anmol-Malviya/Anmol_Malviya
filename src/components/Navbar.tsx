@@ -105,7 +105,7 @@ export default function Navbar() {
               <p className="mn">Find Me</p>
             </div>
             <div className="nav-footer-item-copy">
-              <p className="mn"><a href="https://github.com/anmol0706" target="_blank" rel="noreferrer">Github</a></p>
+              <p className="mn"><a href="https://github.com/Anmol-Malviya" target="_blank" rel="noreferrer">Github</a></p>
               <p className="mn"><a href="https://www.linkedin.com/in/anmol-malviya27/" target="_blank" rel="noreferrer">LinkedIn</a></p>
             </div>
           </div>

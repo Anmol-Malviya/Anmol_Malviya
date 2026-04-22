@@ -65,8 +65,8 @@ export default function Footer() {
           <div className="grid-col socials">
             <p className="mn grid-title">// Connection</p>
             <div className="link-list">
-              <a href="https://linkedin.com/in/anmol-malviya27" target="_blank" rel="noreferrer">LinkedIn</a>
-              <a href="https://github.com/anmol0706" target="_blank" rel="noreferrer">Github</a>
+              <a href="https://www.linkedin.com/in/anmol-malviya27/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href="https://github.com/Anmol-Malviya" target="_blank" rel="noreferrer">Github</a>
               <a href="https://instagram.com/anmol_20_7_" target="_blank" rel="noreferrer">Instagram</a>
               <a href="https://wa.me/917987837169" target="_blank" rel="noreferrer">WhatsApp</a>
             </div>

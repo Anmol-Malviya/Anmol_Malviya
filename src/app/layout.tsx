@@ -85,7 +85,7 @@ export default function RootLayout({
                 "email": "anmolcloud7@gmail.com",
                 "sameAs": [
                   "https://www.linkedin.com/in/anmol-malviya27/",
-                  "https://github.com/anmol0706",
+                  "https://github.com/Anmol-Malviya",
                   "https://www.instagram.com/anmol_20_7_/?hl=en"
                 ]
               },
