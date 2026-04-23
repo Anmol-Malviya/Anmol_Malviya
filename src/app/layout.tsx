@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   keywords: 'Anmol Malviya, Full Stack Developer, React Developer, Node.js Developer, Portfolio, Web Developer, Next.js, UI/UX Designer, India',
   authors: [{ name: 'Anmol Malviya', url: 'https://anmolmalviya7.vercel.app' }],
   verification: {
-    google: 'TH_MmR7Bfz5qgOo27MXovphsxCFVLL8MiGul1PwH790',
+    google: '5zcpq5Fs5HQTZ15kDWHE7rQYA3-mxv3bVmvdfpGPR5c',
   },
   robots: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
   alternates: {
