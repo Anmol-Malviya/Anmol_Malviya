@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://anmolmalviya7.vercel.app',
-    siteName: 'Anmol Malviya - Full Stack Developer Portfolio',
+    siteName: 'Anmol Malviya',
     title: 'Anmol Malviya | Full Stack Developer | React & Node.js Expert',
     description: 'Anmol Malviya is a passionate Full Stack Developer specializing in React, Next.js, Node.js, and GSAP animations. I build high-performance, award-worthy digital experiences.',
     images: [{
@@ -73,7 +73,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={`${inter.variable} ${spaceGrotesk.variable} ${outfit.variable} ${jetbrainsMono.variable}`}>
       <head>
-        <link rel="icon" href="/images/global/site-icon.png" />
+        <link rel="icon" href="/profile.jpeg" />
+        <link rel="apple-touch-icon" href="/profile.jpeg" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -95,7 +96,7 @@ export default function RootLayout({
               {
                 "@context": "https://schema.org",
                 "@type": "WebSite",
-                "name": "Anmol Malviya Portfolio",
+                "name": "Anmol Malviya",
                 "url": "https://anmolmalviya7.vercel.app"
               }
             ])
