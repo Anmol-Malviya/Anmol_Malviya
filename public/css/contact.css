@@ -1,8 +1,8 @@
 .contact {
   position: relative;
   width: 100vw;
-  height: 100vh; /* Force exactly viewport height */
-  padding: 2em; /* Reduced from 4em 2em */
+  min-height: 100svh;
+  padding: 2em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -330,19 +330,121 @@
   100% { background-position: 0% 50%; }
 }
 
+/* ========================
+   CONTACT PAGE — MOBILE
+======================== */
 @media (max-width: 900px) {
+  .contact {
+    min-height: 100svh;
+    height: auto;
+    padding: 6em 1.2em 3em;
+    align-items: flex-start;
+  }
+
   .contact-card-dark {
     grid-template-columns: 1fr;
-    padding: 30px;
-    gap: 40px;
+    padding: 0;
+    gap: 2.5rem;
     background: transparent;
     border: none;
     box-shadow: none;
     backdrop-filter: none;
+    max-width: 100%;
   }
-  
+
+  .contact-left-impressive {
+    gap: 1.2rem;
+  }
+
+  .impressive-text h2 {
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+  }
+
   .impressive-text .contact-glitch-word,
   .impressive-text .contact-gradient-word {
-    font-size: 3.5rem;
+    font-size: clamp(2.4rem, 12vw, 4rem);
+    line-height: 1;
+  }
+
+  .impressive-subtext {
+    max-width: 100%;
+  }
+
+  .impressive-subtext p {
+    font-size: 0.9rem;
+  }
+
+  .contact-direct {
+    gap: 1em;
+    margin-top: 1rem;
+    padding-top: 1.5rem;
+  }
+
+  .direct-item a,
+  .direct-item span:not(.direct-label) {
+    font-size: 0.9rem;
+  }
+
+  /* Form side */
+  .contact-right-form {
+    gap: 1rem;
+  }
+
+  .input-wrapper {
+    height: 50px;
+    border-radius: 14px;
+    padding: 0 12px;
+  }
+
+  .input-wrapper.text-wrapper {
+    height: auto;
+    padding: 12px;
+  }
+
+  .input-wrapper textarea {
+    min-height: 90px;
+  }
+
+  .submit-btn {
+    height: 50px;
+    font-size: 0.95rem;
+    border-radius: 14px;
+  }
+
+  .social-circles {
+    gap: 12px;
+  }
+
+  .social-circle {
+    width: 42px;
+    height: 42px;
+  }
+
+  /* Hide trail images on mobile */
+  .contact .trail-img {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 5em 1rem 2.5em;
+  }
+
+  .impressive-text .contact-glitch-word,
+  .impressive-text .contact-gradient-word {
+    font-size: clamp(2rem, 11vw, 3rem);
+  }
+
+  .input-wrapper {
+    height: 46px;
+    border-radius: 12px;
+  }
+
+  .submit-btn {
+    height: 46px;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
   }
 }

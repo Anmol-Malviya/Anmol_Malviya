@@ -13,6 +13,9 @@ export default function Cursor() {
   const rafId = useRef<number>(0);
 
   useEffect(() => {
+    // Hide cursor on touch devices
+    if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) return;
+
     document.documentElement.style.cursor = "none";
 
     const onMouseMove = (e: MouseEvent) => {

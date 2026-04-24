@@ -53,7 +53,7 @@
 
 .work-header .work-header-title h1,
 .work-header .work-header-title p {
-  font-size: clamp(5rem, 15vw, 13rem);
+  font-size: clamp(3.5rem, 15vw, 13rem);
   line-height: 0.85;
   letter-spacing: -0.05em;
   text-transform: uppercase;
@@ -65,12 +65,22 @@
 .work-header .work-header-title p:last-child {
   -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.3);
   color: transparent;
-  margin-left: 15vw; /* Create a staggered diagonal align */
+  margin-left: 10vw; 
 }
 
 .work-header .work-header-title h1:first-child,
 .work-header .work-header-title p:first-child {
-  margin-right: 15vw;
+  margin-right: 10vw;
+}
+
+@media (max-width: 768px) {
+  .work-header .work-header-title h1:last-child,
+  .work-header .work-header-title p:last-child,
+  .work-header .work-header-title h1:first-child,
+  .work-header .work-header-title p:first-child {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .work-header .work-header-content p.mn {
@@ -133,15 +143,29 @@
   }
   .work-items .row:nth-child(odd) .work-item:last-child {
     flex: 1;
-    margin-top: 6em; /* offset downwards */
+    margin-top: 6em; 
   }
 
   .work-items .row:nth-child(even) .work-item:first-child {
     flex: 1;
-    margin-top: -6em; /* offset upwards */
+    margin-top: -6em; 
   }
   .work-items .row:nth-child(even) .work-item:last-child {
     flex: 1.5;
+  }
+
+  @media (max-width: 1000px) {
+    .work-items .row:nth-child(odd) .work-item:last-child,
+    .work-items .row:nth-child(even) .work-item:first-child {
+      margin-top: 0;
+    }
+    .work-items .row:nth-child(odd) .work-item:first-child,
+    .work-items .row:nth-child(odd) .work-item:last-child,
+    .work-items .row:nth-child(even) .work-item:first-child,
+    .work-items .row:nth-child(even) .work-item:last-child {
+      flex: none;
+      width: 100%;
+    }
   }
 
   .work-items .row .work-item {
@@ -259,8 +283,33 @@
       transform: translateX(0%);
     }
   
+    .work-items {
+      padding: 2em 1.5em;
+      gap: 4em;
+    }
+
     .work-items .row {
       flex-direction: column;
+      gap: 4em;
+    }
+
+    .work-item-content h2 {
+      font-size: clamp(1.8rem, 5vw, 2.5rem);
     }
   }
-  
+
+  @media (max-width: 480px) {
+    .work-header .work-header-content p.mn {
+      padding: 1em 2em;
+      font-size: 0.7rem;
+    }
+
+    .work-items {
+      padding: 2em 1rem;
+      gap: 3rem;
+    }
+
+    .work-items .row {
+      gap: 3rem;
+    }
+  }
