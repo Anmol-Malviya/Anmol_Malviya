@@ -464,27 +464,30 @@
     font-size: 4rem;
   }
 
+  .about-hero .about-hero-main {
+    flex-direction: column;
+    gap: 3em;
+  }
+
   .about-hero .about-hero-bio {
     width: 100%;
-  }
-
-  .about-hero .about-hero-portrait {
-    width: 45%;
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(0deg);
-    z-index: 1;
-    opacity: 0.6;
-  }
-
-  .about-hero .about-hero-bio {
-    width: 90%;
-    padding: 1.5em;
+    padding: 2em 1.5em;
     z-index: 2;
   }
 
+  .about-hero .about-hero-portrait {
+    width: 100%;
+    max-width: 350px;
+    top: auto;
+    transform: none;
+    z-index: 1;
+    opacity: 1;
+    margin: 0 auto;
+  }
+
   .about-hero .about-hero-portrait img {
-    position: absolute;
-    height: 110%;
+    position: relative;
+    height: 100%;
   }
 
   .about-copy .about-copy-content {
@@ -520,5 +523,47 @@
   .stats .stats-header {
     gap: 2em;
     margin-bottom: 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    padding: 6em 1.5em 3em 1.5em;
+  }
+
+  .about-hero .about-hero-header h1 {
+    font-size: 3.5rem;
+  }
+
+  .about-hero .about-hero-bio {
+    padding: 1.5em 1em;
+    border-radius: 2em;
+  }
+
+  .about-hero .about-hero-bio p.ss {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .about-hero .about-hero-bio p.lead {
+    font-size: 1.15rem;
+  }
+
+  .about-hero-bio-links {
+    flex-direction: column;
+    gap: 1.5em;
+    align-items: flex-start;
+  }
+
+  .stats {
+    padding: 4em 1.5em;
+  }
+
+  .stats [class^="stats-item-"] {
+    padding: 2em 1.5em;
+  }
+
+  .stats [class^="stats-item-"] h2 {
+    font-size: 3.5rem;
   }
 }

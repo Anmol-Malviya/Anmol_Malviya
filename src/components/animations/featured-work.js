@@ -17,24 +17,29 @@ export default function init() {
 
   // Initialize animations
   const initAnimations = () => {
-    // Disable animations on small screens (width <= 1000px)
-    if (window.innerWidth <= 1000) {
-      if (scrollTriggerInstance) {
-        scrollTriggerInstance.kill(); // Clean up existing ScrollTrigger
-        scrollTriggerInstance = null;
-      }
-      return;
-    }
+    const isMobile = window.innerWidth <= 1000;
 
     // Kill existing ScrollTrigger instance to prevent duplicates
     if (scrollTriggerInstance) {
       scrollTriggerInstance.kill();
+      scrollTriggerInstance = null;
     }
 
-    // Create section indicators (e.g., "01", "02", ..., "05") and progress dots
+    // Set up featured titles container early (needed for both mobile and desktop)
+    const featuredTitles = document.querySelector(".featured-titles");
+    const titleWrappers = document.querySelectorAll(".featured-title-wrapper");
+
+    if (isMobile) {
+      gsap.set(featuredTitles, { clearProps: "all" });
+      gsap.set(titleWrappers, { clearProps: "all" });
+    }
+
+    // Create section indicators
     const indicatorContainer = document.querySelector(".featured-work-indicator");
     indicatorContainer.innerHTML = ""; // Clear existing content
-    for (let section = 1; section <= 5; section++) {
+    
+    if (!isMobile) {
+      for (let section = 1; section <= 5; section++) {
       // Add section number
       const sectionNumber = document.createElement("p");
       sectionNumber.className = "mn";
@@ -45,6 +50,7 @@ export default function init() {
         const indicator = document.createElement("div");
         indicator.className = "indicator";
         indicatorContainer.appendChild(indicator);
+      }
       }
     }
 
@@ -77,8 +83,6 @@ export default function init() {
     const featuredCardPos =
       window.innerWidth >= 1600 ? featuredCardPosLarge : featuredCardPosSmall;
 
-    // Set up featured titles container
-    const featuredTitles = document.querySelector(".featured-titles");
     const moveDistance = window.innerWidth * 4; // Distance for title movement
 
     // Official Icon URLs provided by User
@@ -129,115 +133,121 @@ export default function init() {
        shine.className = "card-shine";
        featuredImgCard.appendChild(shine);
        
-       // Initial position
-       const position = featuredCardPos[i - 1];
-       gsap.set(featuredImgCard, {
-         x: position.x,
-         y: position.y,
-       });
-
-       // Magnetic Move Logic
-       featuredImgCard.addEventListener("mousemove", (e) => {
-         const { left, top, width, height } = featuredImgCard.getBoundingClientRect();
-         const mouseX = e.clientX - left;
-         const mouseY = e.clientY - top;
-         const xPct = mouseX / width - 0.5;
-         const yPct = mouseY / height - 0.5;
-
-         // Tilt + Move
-         gsap.to(featuredImgCard, {
-           rotateX: -yPct * 20,
-           rotateY: xPct * 20,
-           x: position.x + (xPct * 30),
-           y: position.y + (yPct * 30),
-           duration: 0.3,
-           ease: "power2.out",
-           overwrite: "auto"
-         });
-
-         // Move Shine
-         gsap.to(shine, {
-           left: `${mouseX - width/2}px`,
-           top: `${mouseY - height/2}px`,
-           duration: 0.3,
-         });
-       });
-
-       featuredImgCard.addEventListener("mouseleave", () => {
-         gsap.to(featuredImgCard, {
-           rotateX: 0,
-           rotateY: 0,
+       if (!isMobile) {
+         // Initial position
+         const position = featuredCardPos[i - 1];
+         gsap.set(featuredImgCard, {
            x: position.x,
            y: position.y,
-           duration: 0.8,
-           ease: "elastic.out(1, 0.4)"
          });
-       });
+
+         // Magnetic Move Logic
+         featuredImgCard.addEventListener("mousemove", (e) => {
+           const { left, top, width, height } = featuredImgCard.getBoundingClientRect();
+           const mouseX = e.clientX - left;
+           const mouseY = e.clientY - top;
+           const xPct = mouseX / width - 0.5;
+           const yPct = mouseY / height - 0.5;
+
+           // Tilt + Move
+           gsap.to(featuredImgCard, {
+             rotateX: -yPct * 20,
+             rotateY: xPct * 20,
+             x: position.x + (xPct * 30),
+             y: position.y + (yPct * 30),
+             duration: 0.3,
+             ease: "power2.out",
+             overwrite: "auto"
+           });
+
+           // Move Shine
+           gsap.to(shine, {
+             left: `${mouseX - width/2}px`,
+             top: `${mouseY - height/2}px`,
+             duration: 0.3,
+           });
+         });
+
+         featuredImgCard.addEventListener("mouseleave", () => {
+           gsap.to(featuredImgCard, {
+             rotateX: 0,
+             rotateY: 0,
+             x: position.x,
+             y: position.y,
+             duration: 0.8,
+             ease: "elastic.out(1, 0.4)"
+           });
+         });
+       } else {
+         gsap.set(featuredImgCard, { clearProps: "all" });
+       }
 
        imagesContainer.appendChild(featuredImgCard);
     }
 
-    // Initialize image cards with hidden and scaled-down state
-    const featuredImgCards = document.querySelectorAll(".featured-img-card");
-    featuredImgCards.forEach((featuredImgCard) => {
-      gsap.set(featuredImgCard, {
-        z: -1500, // Push back in 3D space
-        scale: 0, // Scale down to invisible
+    if (!isMobile) {
+      // Initialize image cards with hidden and scaled-down state
+      const featuredImgCards = document.querySelectorAll(".featured-img-card");
+      featuredImgCards.forEach((featuredImgCard) => {
+        gsap.set(featuredImgCard, {
+          z: -1500, // Push back in 3D space
+          scale: 0, // Scale down to invisible
+        });
       });
-    });
 
-    // Create ScrollTrigger for animation
-    scrollTriggerInstance = ScrollTrigger.create({
-      trigger: ".featured-work", // Trigger element
-      start: "top top", // Start when top of trigger hits top of viewport
-      end: `+=${window.innerHeight * 5}px`, // Extend scroll distance
-      pin: true, // Pin section during scroll
-      scrub: 1, // Smoothly tie animations to scroll position
-      onUpdate: (self) => {
-        // Move titles horizontally based on scroll progress
-        const xPosition = -moveDistance * self.progress;
-        gsap.set(featuredTitles, {
-          x: xPosition,
-        });
+      // Create ScrollTrigger for animation
+      scrollTriggerInstance = ScrollTrigger.create({
+        trigger: ".featured-work", // Trigger element
+        start: "top top", // Start when top of trigger hits top of viewport
+        end: `+=${window.innerHeight * 5}px`, // Extend scroll distance
+        pin: true, // Pin section during scroll
+        scrub: 1, // Smoothly tie animations to scroll position
+        onUpdate: (self) => {
+          // Move titles horizontally based on scroll progress
+          const xPosition = -moveDistance * self.progress;
+          gsap.set(featuredTitles, {
+            x: xPosition,
+          });
 
-        // Parallax effect for individual title wrappers (Scroll Mirroring)
-        const titleWrappers = document.querySelectorAll(".featured-title-wrapper");
-        titleWrappers.forEach((wrapper, i) => {
-            const speed = 1 + (i * 0.1);
-            gsap.set(wrapper, {
-                x: (xPosition * (speed - 1)) / 10, // Subtle secondary movement
-                skewX: self.getVelocity() / 500, // Dynamic skew based on scroll speed
+          // Parallax effect for individual title wrappers (Scroll Mirroring)
+          const titleWrappers = document.querySelectorAll(".featured-title-wrapper");
+          titleWrappers.forEach((wrapper, i) => {
+              const speed = 1 + (i * 0.1);
+              gsap.set(wrapper, {
+                  x: (xPosition * (speed - 1)) / 10, // Subtle secondary movement
+                  skewX: self.getVelocity() / 500, // Dynamic skew based on scroll speed
+              });
+          });
+
+          // Animate image cards (z-position and scale) with stagger
+          featuredImgCards.forEach((featuredImgCard, index) => {
+            const staggerOffset = index * 0.075; // Delay per card
+            const scaledProgress = (self.progress - staggerOffset) * 2; // Adjust progress
+            const individualProgress = Math.max(0, Math.min(1, scaledProgress)); // Clamp to [0,1]
+            const newZ = -1500 + (1500 + 1500) * individualProgress; // Move from -1500 to 1500
+            const scaleProgress = Math.min(1, individualProgress * 10); // Faster scale change
+            const scale = Math.max(0, Math.min(1, scaleProgress)); // Clamp scale to [0,1]
+            gsap.set(featuredImgCard, {
+              z: newZ,
+              scale: scale,
             });
-        });
-
-        // Animate image cards (z-position and scale) with stagger
-        featuredImgCards.forEach((featuredImgCard, index) => {
-          const staggerOffset = index * 0.075; // Delay per card
-          const scaledProgress = (self.progress - staggerOffset) * 2; // Adjust progress
-          const individualProgress = Math.max(0, Math.min(1, scaledProgress)); // Clamp to [0,1]
-          const newZ = -1500 + (1500 + 1500) * individualProgress; // Move from -1500 to 1500
-          const scaleProgress = Math.min(1, individualProgress * 10); // Faster scale change
-          const scale = Math.max(0, Math.min(1, scaleProgress)); // Clamp scale to [0,1]
-          gsap.set(featuredImgCard, {
-            z: newZ,
-            scale: scale,
           });
-        });
 
-        // Update indicator opacity based on scroll progress
-        const indicators = document.querySelectorAll(".indicator");
-        const totalIndicators = indicators.length;
-        const progressPerIndicator = 1 / totalIndicators;
-        indicators.forEach((indicator, index) => {
-          const indicatorStart = index * progressPerIndicator;
-          const indicatorOpacity = self.progress > indicatorStart ? 1 : 0.2;
-          gsap.to(indicator, {
-            opacity: indicatorOpacity,
-            duration: 0.3, // Smooth opacity transition
+          // Update indicator opacity based on scroll progress
+          const indicators = document.querySelectorAll(".indicator");
+          const totalIndicators = indicators.length;
+          const progressPerIndicator = 1 / totalIndicators;
+          indicators.forEach((indicator, index) => {
+            const indicatorStart = index * progressPerIndicator;
+            const indicatorOpacity = self.progress > indicatorStart ? 1 : 0.2;
+            gsap.to(indicator, {
+              opacity: indicatorOpacity,
+              duration: 0.3, // Smooth opacity transition
+            });
           });
-        });
-      },
-    });
+        },
+      });
+    }
   };
 
   // Run animations on page load

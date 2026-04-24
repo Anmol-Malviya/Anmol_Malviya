@@ -12,9 +12,8 @@ export default function init() {
     return;
   }
 
-  const counterElement = document.querySelector(".preloader-counter h2, .preloader-counter h1");
-  const fillElement = document.querySelector(".preloader-fill");
-  const barElement = document.querySelector(".preloader-bar");
+  const lines = document.querySelectorAll(".preloader-line span");
+  const progressBar = document.querySelector(".preloader-progress-bar");
 
   // Prevent scrolling while preloader is active
   document.body.style.overflow = "hidden";
@@ -30,36 +29,26 @@ export default function init() {
     }
   });
 
-  // Counter logic
-  let counterObj = { value: 0 };
-  
-  tl.to(counterObj, {
-    value: 100,
-    duration: 2.2,
-    ease: "power2.inOut",
-    onUpdate: () => {
-      if (counterElement) {
-        counterElement.innerText = Math.round(counterObj.value);
-      }
-    }
+  tl.to(lines, {
+    y: "0%",
+    duration: 1.2,
+    ease: "power4.out",
+    stagger: 0.2
   }, 0)
-  // Fill background
-  .to(fillElement, {
-    height: "100%",
-    duration: 2.2,
-    ease: "power2.inOut"
-  }, 0)
-  // Progress bar
-  .to(barElement, {
+  .to(progressBar, {
     width: "100%",
-    duration: 2.2,
+    duration: 2,
     ease: "power2.inOut"
   }, 0)
-  // Final slide up transition
+  .to(lines, {
+    y: "-100%",
+    duration: 0.8,
+    ease: "power4.in",
+    stagger: 0.1
+  }, 2)
   .to(preloader, {
     y: "-100%",
     duration: 0.8,
-    ease: "power3.inOut",
-    delay: 0.2
-  });
+    ease: "power3.inOut"
+  }, 2.4);
 }

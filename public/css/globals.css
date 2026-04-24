@@ -86,50 +86,93 @@ p.mn {
   line-height: 1.125;
 }
 
-/* contact cta */
+/* ========================
+   CONTACT CTA — DESKTOP
+======================== */
 .contact-cta {
   position: relative;
   width: 100vw;
-  height: 100svh;
-  padding: 4em;
+  min-height: 100svh;
+  padding: 6em 5em;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--background);
+  background-color: var(--bg);
+  overflow: hidden;
+}
+
+/* Ambient glow orbs */
+.contact-cta::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: -5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(108, 99, 255, 0.12) 0%, transparent 65%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.contact-cta::after {
+  content: "";
+  position: absolute;
+  bottom: 10%;
+  right: -5%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 212, 170, 0.08) 0%, transparent 65%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .contact-cta .contact-button {
   position: relative;
   width: 100%;
-  max-width: 900px;
-  height: 320px;
-  border-radius: 160px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  max-width: 1200px;
+  height: auto;
+  min-height: 420px;
+  border-radius: 3rem;
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid rgba(255, 255, 255, 0.07);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  gap: 0.5em;
+  gap: 2em;
+  padding: 4em 5em;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-  box-shadow: 
-    0 40px 100px -30px rgba(0, 0, 0, 0.5),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1),
-    inset 0 0 80px rgba(255, 255, 255, 0.02);
+  box-shadow:
+    0 40px 100px -30px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    inset 0 0 80px rgba(255, 255, 255, 0.01);
   overflow: hidden;
   cursor: pointer;
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
+  z-index: 1;
 }
 
 .contact-cta .contact-button:hover {
-  transform: scale(1.01) translateY(-10px);
-  border-color: rgba(108, 99, 255, 0.4);
-  background: rgba(255, 255, 255, 0.04);
-  box-shadow: 
-    0 60px 120px -30px rgba(108, 99, 255, 0.15),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2),
-    inset 0 0 100px rgba(108, 99, 255, 0.05);
+  transform: scale(1.01) translateY(-6px);
+  border-color: rgba(108, 99, 255, 0.35);
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow:
+    0 60px 140px -30px rgba(108, 99, 255, 0.2),
+    0 0 0 1px rgba(108, 99, 255, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 0 100px rgba(108, 99, 255, 0.04);
+}
+
+/* Left side — text content */
+.contact-cta .contact-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: flex-start;
+  flex: 1;
 }
 
 .contact-cta .contact-text-small {
@@ -140,13 +183,24 @@ p.mn {
 
 .contact-cta .contact-text-small p {
   text-transform: uppercase;
-  letter-spacing: 0.5em;
-  font-size: 0.85rem;
+  letter-spacing: 0.4em;
+  font-size: 0.75rem;
   font-weight: 600;
   color: var(--accent1);
   opacity: 0.8;
-  margin-bottom: 0.5em;
-  font-family: var(--font-mono);
+  font-family: "JetBrains Mono", monospace;
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+}
+
+.contact-cta .contact-text-small p::before {
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background: var(--accent1);
+  opacity: 0.6;
 }
 
 .contact-cta .contact-text-large {
@@ -155,24 +209,82 @@ p.mn {
 }
 
 .contact-cta .contact-text-large .contact-cta-heading {
-  font-family: var(--font-hero);
-  font-size: clamp(3rem, 8vw, 6.5rem);
-  font-weight: 800;
-  background: linear-gradient(180deg, #ffffff 30%, rgba(255, 255, 255, 0.5) 100%);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(3.5rem, 6.5vw, 7rem);
+  font-weight: 900;
+  background: linear-gradient(160deg, #ffffff 30%, rgba(255, 255, 255, 0.45) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  letter-spacing: -0.03em;
-  line-height: 1;
-  text-align: center;
+  letter-spacing: -0.04em;
+  line-height: 0.92;
+  text-align: left;
   transition: all 0.5s ease;
   text-transform: uppercase;
 }
 
 .contact-cta .contact-button:hover .contact-text-large .contact-cta-heading {
-  background: linear-gradient(180deg, #ffffff 0%, var(--accent1) 150%);
+  background: linear-gradient(160deg, #ffffff 0%, var(--accent1) 120%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transform: scale(1.02);
+}
+
+/* Right side — stats + cta pill */
+.contact-cta .rocket-container {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5em;
+}
+
+.contact-cta .rocket-svg {
+  width: 80px;
+  height: 80px;
+  color: rgba(255, 255, 255, 0.15);
+  transition: all 0.5s ease;
+}
+
+.contact-cta .contact-button:hover .rocket-svg {
+  color: var(--accent2);
+  transform: rotate(-30deg) translateY(-8px);
+  filter: drop-shadow(0 0 20px rgba(0, 212, 170, 0.5));
+}
+
+.contact-cta .rocket-fire {
+  display: none;
+}
+
+/* Stats row below heading */
+.contact-cta .contact-stats {
+  display: flex;
+  gap: 3em;
+  margin-top: 1.5em;
+  z-index: 2;
+  position: relative;
+}
+
+.contact-cta .contact-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+}
+
+.contact-cta .contact-stat .stat-value {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--fg);
+  line-height: 1;
+}
+
+.contact-cta .contact-stat .stat-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.35);
+  font-family: "JetBrains Mono", monospace;
 }
 
 .contact-cta .contact-button-bg {
@@ -182,9 +294,9 @@ p.mn {
   width: 100%;
   height: 100%;
   background: radial-gradient(
-    circle at var(--x, 50%) var(--y, 50%), 
-    rgba(108, 99, 255, 0.15) 0%, 
-    transparent 50%
+    circle at var(--x, 50%) var(--y, 50%),
+    rgba(108, 99, 255, 0.12) 0%,
+    transparent 55%
   );
   z-index: 0;
   pointer-events: none;
@@ -193,75 +305,103 @@ p.mn {
 
 .contact-cta .contact-button:hover .contact-button-bg {
   background: radial-gradient(
-    circle at var(--x, 50%) var(--y, 50%), 
-    rgba(108, 99, 255, 0.3) 0%, 
+    circle at var(--x, 50%) var(--y, 50%),
+    rgba(108, 99, 255, 0.25) 0%,
     transparent 60%
   );
 }
 
-@media (max-width: 1000px) {
-  .contact-cta {
-    padding: 2em;
-  }
-  
-  .contact-cta .contact-button {
-    height: 240px;
-    border-radius: 40px;
-  }
-  
-  .contact-cta .contact-text-large .contact-cta-heading {
-    font-size: 3.5rem;
-  }
-}
-
-
 @keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 @keyframes stripeMove {
-  0% {
-    transform: translateX(-50%);
-  }
-
-  100% {
-    transform: translateX(0%);
-  }
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
 }
 
+@keyframes ctaPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(108, 99, 255, 0.25), 0 40px 100px -30px rgba(0,0,0,0.5); }
+  50% { box-shadow: 0 0 0 12px rgba(108, 99, 255, 0), 0 40px 100px -30px rgba(108, 99, 255, 0.1); }
+}
+
+/* ========================
+   CONTACT CTA — MOBILE
+======================== */
 @media (max-width: 1000px) {
   h1 {
     font-size: 2.5rem;
   }
 
   .contact-cta {
-    height: max-content;
-    padding: 8em 2em;
+    height: auto;
+    padding: 3em 1.5em 4em;
+    align-items: stretch;
   }
 
   .contact-cta .contact-button {
-    width: 95%;
-    height: 250px;
-    gap: 1em;
+    width: 100%;
+    height: auto;
+    min-height: 0;
     border-radius: 2em;
+    padding: 3em 2em;
+    gap: 1.2em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    animation: ctaPulse 3s ease-in-out infinite;
+  }
+
+  .contact-cta .contact-stats {
+    display: none;
   }
 
   .contact-cta .contact-text-small {
-    width: 75%;
-    text-align: center;
+    width: 100%;
+    text-align: left;
+  }
+
+  .contact-cta .contact-text-small p {
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+  }
+
+  .contact-cta .contact-text-large {
+    width: 100%;
   }
 
   .contact-cta .contact-text-large .contact-cta-heading {
-    font-size: 3rem;
+    font-size: clamp(2.8rem, 14vw, 5rem);
+    text-align: left;
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+  }
+
+  /* Rocket icon — float to bottom right */
+  .contact-cta .rocket-container {
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+    width: 48px;
+    height: 48px;
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-cta {
+    padding: 2.5em 1.2em 3em;
+  }
+
+  .contact-cta .contact-button {
+    padding: 2.5em 1.6em;
+    border-radius: 1.5em;
+  }
+
+  .contact-cta .contact-text-large .contact-cta-heading {
+    font-size: clamp(2.4rem, 13vw, 4rem);
   }
 }

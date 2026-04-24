@@ -16,73 +16,62 @@
   color: var(--fg);
 }
 
-.preloader-counter {
-  font-family: "formula-extended", "Space Grotesk", sans-serif;
-  font-size: 8rem;
-  font-weight: 800;
-  color: transparent;
-  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.1);
-  position: relative;
-  z-index: 2;
+.preloader-brand {
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 2;
 }
 
-/* Reset heading size so it inherits the counter's font-size */
-.preloader-counter h1,
-.preloader-counter h2 {
-  font-size: inherit;
-  font-weight: inherit;
-  color: inherit;
+.preloader-line {
+  overflow: hidden;
   line-height: 1;
-  -webkit-text-stroke: inherit;
 }
 
-.preloader-counter span {
-  font-size: 3rem;
-  margin-bottom: 1.2rem;
-  margin-left: 5px;
-  color: var(--accent1);
+.preloader-line span {
+  display: block;
+  font-family: "formula-extended", "Space Grotesk", sans-serif;
+  font-size: 8vw;
+  font-weight: 800;
+  text-transform: uppercase;
+  transform: translateY(100%);
+  will-change: transform;
+}
+
+.preloader-line:nth-child(1) span {
+  color: var(--fg);
   -webkit-text-stroke: 0;
 }
 
-.preloader-fill {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 0%;
-  background: linear-gradient(to top, rgba(108, 99, 255, 0.2), transparent);
-  z-index: 1;
-  pointer-events: none;
+.preloader-line:nth-child(2) span {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--fg);
 }
 
-.preloader-bar {
+.preloader-progress {
   position: absolute;
-  bottom: 0px;
-  left: 0;
-  height: 6px;
-  width: 0%;
-  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  bottom: 10%;
+  width: 250px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
   z-index: 3;
-  box-shadow: 0 0 20px var(--accent1);
 }
 
-.preloader-text {
-  font-family: "JetBrains Mono", monospace;
-  text-transform: uppercase;
-  letter-spacing: 0.3em;
-  font-size: 0.8rem;
-  margin-top: 2rem;
-  opacity: 0.5;
+.preloader-progress-bar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  box-shadow: 0 0 10px var(--accent1);
+  will-change: width;
 }
 
 @media (max-width: 768px) {
-  .preloader-counter {
-    font-size: 5rem;
+  .preloader-line span {
+    font-size: 15vw;
   }
-  .preloader-counter span {
-    font-size: 2rem;
-    margin-bottom: 0.8rem;
+  .preloader-progress {
+    width: 150px;
   }
 }

@@ -32,12 +32,17 @@ export default function Home() {
     <>
       {/* ================= CINEMATIC PRELOADER ================= */}
       <div id="preloader">
-        <div className="preloader-counter">
-          <h2 className="mn">0</h2><span>%</span>
+        <div className="preloader-brand">
+          <div className="preloader-line">
+            <span>ANMOL</span>
+          </div>
+          <div className="preloader-line">
+            <span>MALVIYA</span>
+          </div>
         </div>
-        <div className="preloader-fill"></div>
-        <div className="preloader-bar"></div>
-        <div className="preloader-text">Initializing Systems</div>
+        <div className="preloader-progress">
+          <div className="preloader-progress-bar"></div>
+        </div>
       </div>
 
       {/* scroll progress bar */}
@@ -108,8 +113,53 @@ export default function Home() {
 
         {/* home - hero img holder */}
         <section className="hero-img-holder">
-          <div className="hero-img">
-            <img src="/images/hero/image-1.jpg" alt="Anmol Malviya — full stack developer portfolio preview" />
+          <div className="hero-img resume-card">
+            <div className="resume-header">
+              <div className="resume-avatar">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="Tech Stack" className="cycling-tech-icon" />
+              </div>
+              <div className="resume-title">
+                <h3>Anmol Malviya</h3>
+                <p>Full Stack Engineer &amp; UI/UX</p>
+              </div>
+              <div className="resume-badge">PRO</div>
+            </div>
+            
+            <div className="resume-body">
+              <div className="resume-section">
+                <h4>Top Tech Stack</h4>
+                <div className="resume-tags">
+                  <span>React / Next.js</span>
+                  <span>Node.js</span>
+                  <span>GSAP</span>
+                </div>
+              </div>
+
+              <div className="resume-section">
+                <h4>Featured Projects</h4>
+                <div className="resume-projects">
+                  <div className="resume-project">
+                    <span className="project-name">Vyorai AI Interviewer</span>
+                    <span className="project-tech">Full-Stack / AI</span>
+                  </div>
+                  <div className="resume-project">
+                    <span className="project-name">TaskFlow Dashboard</span>
+                    <span className="project-tech">Web Design / Data</span>
+                  </div>
+                  <div className="resume-project">
+                    <span className="project-name">FinTech Web3 App</span>
+                    <span className="project-tech">Mobile / Web3</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="resume-footer">
+              <div className="resume-status">
+                <span className="status-dot"></span>
+                <span>Available for New Projects</span>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -256,6 +306,20 @@ export default function Home() {
               </div>
               <div className="contact-text-large">
                 <p className="contact-cta-heading">Get in touch</p>
+              </div>
+              <div className="contact-stats">
+                <div className="contact-stat">
+                  <span className="stat-value">10+</span>
+                  <span className="stat-label">Projects</span>
+                </div>
+                <div className="contact-stat">
+                  <span className="stat-value">3+</span>
+                  <span className="stat-label">Years Exp.</span>
+                </div>
+                <div className="contact-stat">
+                  <span className="stat-value">100%</span>
+                  <span className="stat-label">Committed</span>
+                </div>
               </div>
             </div>
             <div className="rocket-container">

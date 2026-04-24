@@ -12,22 +12,29 @@ export default function init() {
   // Register ScrollTrigger plugin with GSAP
   gsap.registerPlugin(ScrollTrigger);
 
-  // Select hero image element
-  const heroImg = document.querySelector(".hero-img img");
-  let currentImageIndex = 1; // Tracks current image in sequence
-  const totalImages = 10; // Total number of images for cycling
-  let scrollTriggerInstance = null; // Stores ScrollTrigger instance for cleanup
+  // Tech Icon Cycling Logic
+  const cyclingIcon = document.querySelector(".cycling-tech-icon");
+  const techIcons = [
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", invert: false },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", invert: true },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", invert: false },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", invert: false },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg", invert: false },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg", invert: false },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", invert: true }
+  ];
+  let techIndex = 0;
 
-  // Cycle through images every 250ms
-  setInterval(() => {
-    // Increment image index, reset to 1 if it exceeds totalImages
-    currentImageIndex =
-      currentImageIndex >= totalImages ? 1 : currentImageIndex + 1;
-    // Update hero image source using the cached reference
-    if (heroImg) {
-      heroImg.src = `/images/projects/project-${currentImageIndex}.png`;
-    }
-  }, 250);
+  if (cyclingIcon) {
+    setInterval(() => {
+      techIndex = (techIndex + 1) % techIcons.length;
+      const icon = techIcons[techIndex];
+      cyclingIcon.src = icon.src;
+      cyclingIcon.style.filter = icon.invert ? "invert(1)" : "none";
+    }, 400); // 400ms cycle
+  }
+
+  let scrollTriggerInstance = null; // Stores ScrollTrigger instance for cleanup
 
   // Hero Header Entrance Animation
   const heroHeaders = document.querySelectorAll(".hero-header .hero-name-word");
@@ -129,6 +136,11 @@ export default function init() {
       scrollTriggerInstance.kill();
     }
 
+    const isMobile = window.innerWidth <= 1000;
+    const initialScale = isMobile ? 0.45 : 0.25;
+    const finalScale = 1;
+    const initialY = isMobile ? -100 : -110;
+
     // Create new ScrollTrigger instance
     scrollTriggerInstance = ScrollTrigger.create({
       trigger: ".hero-img-holder", // Element that triggers animation
@@ -138,9 +150,9 @@ export default function init() {
         const progress = self.progress; // Scroll progress (0 to 1)
         // Animate hero image properties based on scroll progress
         gsap.set(".hero-img", {
-          y: `${-110 + 110 * progress}%`, // Move up from -110% to 0%
-          scale: 0.25 + 0.75 * progress, // Scale from 0.25 to 1
-          rotation: -15 + 15 * progress, // Rotate from -15deg to 0deg
+          y: `${initialY + Math.abs(initialY) * progress}%`,
+          scale: initialScale + (finalScale - initialScale) * progress,
+          rotation: -15 + 15 * progress,
         });
       },
     });

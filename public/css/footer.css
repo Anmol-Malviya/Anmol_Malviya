@@ -185,26 +185,119 @@
 /* Mobile Responsive */
 @media (max-width: 1000px) {
   .footer-v2 {
-    padding: 2rem 1rem;
-  }
-  
-  .footer-glass-wrapper {
-    padding: 2rem;
-    gap: 4rem;
+    padding: 2rem 1.2rem 1.5rem;
   }
 
+  .footer-glass-wrapper {
+    padding: 2.5rem 1.8rem;
+    gap: 3rem;
+    border-radius: 2rem;
+  }
+
+  /* CTA row — stack vertically */
   .footer-cta-section {
     flex-direction: column;
     align-items: flex-start;
     gap: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  .cta-title {
+    font-size: clamp(2rem, 9vw, 3.5rem);
+    line-height: 1;
+  }
+
+  .cta-subtitle {
+    font-size: 0.85rem;
+    margin-top: 0.4em;
+  }
+
+  .cta-button {
+    width: 100%;
+    justify-content: center;
+    padding: 1.1rem 2rem;
+    font-size: 0.9rem;
+  }
+
+  /* Info grid — 2 columns on tablet, 1 on phone */
+  .footer-info-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem 2rem;
+  }
+
+  .main-branding {
+    grid-column: 1 / -1;
+    order: -1;
+  }
+
+  .footer-logo {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .grid-title {
+    margin-bottom: 1.2rem;
+  }
+
+  .link-list {
+    gap: 1rem;
+  }
+
+  .link-list a {
+    font-size: 14px;
+  }
+
+  .expertise-tags {
+    gap: 0.5rem;
+  }
+
+  .tag-pill {
+    font-size: 11px;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .location-tag {
+    margin-top: 1.5rem;
+    padding: 0.6rem 1rem;
+  }
+
+  /* Bottom bar */
+  .footer-bottom-v2 {
+    flex-direction: row;
+    padding-top: 2rem;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-v2 {
+    padding: 1.5rem 1rem 1rem;
+  }
+
+  .footer-glass-wrapper {
+    padding: 2rem 1.4rem;
+    gap: 2.5rem;
+    border-radius: 1.5rem;
   }
 
   .footer-info-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2rem;
   }
 
-  .main-branding {
-    order: -1;
+  .cta-title {
+    font-size: clamp(1.8rem, 10vw, 2.8rem);
+  }
+
+  .cta-button {
+    padding: 1rem 1.5rem;
+    font-size: 0.85rem;
+  }
+
+  .footer-bottom-v2 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    padding-top: 1.5rem;
   }
 }
