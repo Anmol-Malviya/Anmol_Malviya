@@ -1,7 +1,7 @@
 /* footer v2 */
 .footer-v2 {
   position: relative;
-  width: 100vw;
+  width: 100%;
   padding: 4rem 2rem 2rem 2rem;
   background: var(--bg);
   overflow: hidden;
