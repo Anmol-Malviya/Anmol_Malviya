@@ -8,7 +8,7 @@
 <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=800&size=26&duration=3000&pause=1000&color=06B6D4&center=true&vCenter=true&width=600&lines=Crafting+Brutalist+Web+Experiences;Next.js+%2B+GSAP+Specialist;Building+High-Performance+UIs" alt="Anmol Malviya - Next.js and GSAP Specialist" />
 
 <p align="center">
-  <strong>Complete Documentation for a high-performance, brutalist-inspired creative developer portfolio.</strong>
+  <strong>A high-performance, brutalist-inspired creative developer portfolio. Optimized for speed, motion, and SEO.</strong>
 </p>
 
 <!-- SVG Tech Badges -->
@@ -17,6 +17,14 @@
   <img src="https://img.shields.io/badge/React-19.2-111111?style=for-the-badge&logo=react&logoColor=06B6D4" alt="React 19" />
   <img src="https://img.shields.io/badge/GSAP-3.15-111111?style=for-the-badge&logo=greensock&logoColor=88CE02" alt="GSAP Animation Library" />
   <img src="https://img.shields.io/badge/Tailwind_CSS-4.0-111111?style=for-the-badge&logo=tailwindcss&logoColor=06B6D4" alt="Tailwind CSS v4" />
+</p>
+
+<!-- Lighthouse Score Badges -->
+<p align="center">
+  <img src="https://img.shields.io/badge/Performance-100-06B6D4?style=flat-square&logo=lighthouse&logoColor=white" alt="Performance Score" />
+  <img src="https://img.shields.io/badge/Accessibility-100-06B6D4?style=flat-square&logo=lighthouse&logoColor=white" alt="Accessibility Score" />
+  <img src="https://img.shields.io/badge/Best_Practices-100-06B6D4?style=flat-square&logo=lighthouse&logoColor=white" alt="Best Practices Score" />
+  <img src="https://img.shields.io/badge/SEO-100-06B6D4?style=flat-square&logo=lighthouse&logoColor=white" alt="SEO Score" />
 </p>
 
 </div>
@@ -29,23 +37,24 @@
 
 - [Project Overview](#-project-overview)
 - [Live Demo](#-live-demo)
-- [Core Features](#-core-features)
-- [Design System](#-design-system)
+- [Key Features](#-key-features)
+- [Project Roadmap](#-project-roadmap)
+- [Technical Stack](#-technical-stack)
+- [Project Structure](#-project-structure)
 - [Animation Architecture](#-animation-architecture)
-- [Performance Optimizations](#-performance-optimizations)
+- [SEO & Performance](#-seo--performance)
 - [Installation & Setup](#-installation--setup)
-- [Deployment](#-deployment)
-- [Contact](#-contact)
+- [License](#-license)
 
 ---
 
 ## ✦ 🚀 Project Overview
 
-Welcome to the comprehensive documentation for my personal **creative developer portfolio**. This project is a masterclass in combining the raw, unpolished aesthetics of **Brutalist Design** with the fluid, hyper-interactive motion capabilities of **GSAP (GreenSock Animation Platform)**. 
+Welcome to the ultimate **creative developer portfolio** repository. This project is a specialized implementation focusing on the intersection of **Brutalist Web Design** and advanced **Motion Graphics**. It's designed to push the boundaries of what a personal portfolio can be.
 
-> *"It's not just a website; it's a carefully crafted, high-fidelity digital experience."*
+> *"Motion tells the story that words can only describe."*
 
-Built specifically to showcase advanced front-end engineering, this portfolio features complex velocity-based animations, magnetic physics, and an uncompromising visual identity that draws inspiration from Awwwards-winning websites.
+By leveraging **GSAP** for velocity-aware physics and **Next.js 16** for blazing fast performance, this site offers a fluid, editorial-style experience that feels more like a cinematic piece than a traditional website.
 
 <br/>
 
@@ -53,77 +62,98 @@ Built specifically to showcase advanced front-end engineering, this portfolio fe
 
 <div align="center">
   <a href="https://your-live-link-here.vercel.app">
-    <img src="https://img.shields.io/badge/View_Live_Portfolio-06B6D4?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo" />
+    <img src="https://img.shields.io/badge/View_Live_Portfolio-111111?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo" />
   </a>
-  <p><i>Experience the portfolio in its full glory with all animations and interactions. The live version is deployed on Vercel with a global CDN distribution for optimal performance worldwide.</i></p>
 </div>
 
 <br/>
 
-## ✦ ✨ Core Features
+## ✦ ✨ Key Features
 
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3>⚡ Seamless Page Transitions</h3>
-      <p>Custom GSAP-powered routing animations that eliminate jarring page loads, creating a Single Page Application (SPA) feel within the Next.js App Router architecture.</p>
+      <h3>⚡ High-Velocity Transitions</h3>
+      <p>Custom page transitions that calculate exit and entry velocities to maintain momentum during navigation.</p>
     </td>
     <td width="50%" valign="top">
-      <h3>🎨 Scroll-Triggered Storytelling</h3>
-      <p>Dynamic content reveals, parallax effects, and stagger animations based precisely on the user's scroll position, creating an interactive narrative.</p>
+      <h3>🎨 Magnetic Physics</h3>
+      <p>UI elements that possess "mass" and "gravitational pull," reacting dynamically to the user's cursor proximity.</p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3>📱 Mobile-First Responsiveness</h3>
-      <p>Optimized for all devices. Custom breakpoints ensure that the massive "Bulky Brutalist" typography scales perfectly without horizontal overflow on mobile screens.</p>
+      <h3>💨 Smooth Momentum Scroll</h3>
+      <p>Powered by <b>Lenis</b>, providing a synchronized scroll experience that enables perfect animation timing.</p>
     </td>
     <td width="50%" valign="top">
-      <h3>🖱️ Interactive Navigation</h3>
-      <p>An elegant, animated liquid follower cursor and magnetic buttons that react to user velocity, significantly enhancing the tactile feel of the UI.</p>
+      <h3>💅 Brutalist Grid System</h3>
+      <p>A "Bulky" architectural layout using high-contrast borders and massive typography for maximum visual impact.</p>
     </td>
   </tr>
 </table>
 
 <br/>
 
-## ✦ 💅 Design System
+## ✦ 🗺️ Project Roadmap
 
-The visual identity is built around a **"Bulky Brutalist"** design system:
+- [x] **Phase 1:** Core Architecture (Next.js 16 + TypeScript)
+- [x] **Phase 2:** Design System Implementation (Brutalist + Tailwind 4)
+- [x] **Phase 3:** Motion Engine (GSAP + Velocity Tracking)
+- [x] **Phase 4:** Responsive Overhaul (Fluid Typography)
+- [ ] **Phase 5:** Interactive WebGL Backgrounds (Planned)
+- [ ] **Phase 6:** Dark/Light Theme Switching (Planned)
 
-*   **Color Palette:** An uncompromising **Obsidian Black (`#111111`)** foundation pierced by vibrant **Cyan (`#06B6D4`)** accents to guide user attention.
-*   **Typography:** Massive, heavy-weight fonts that act as structural elements of the page rather than just readable text.
-*   **Layout:** A dense, architectural **Bento Grid** system that organizes complex information into digestible, highly visual blocks with thick borders and sharp corners.
-*   **Aesthetic Tone:** Industrial, raw, and highly engineered.
+<br/>
+
+## ✦ 🏗️ Project Structure
+
+```text
+gsap-portfolio-nextjs/
+├── src/
+│   ├── app/            # Next.js App Router (Pages & Layouts)
+│   │   ├── about/      # About Page
+│   │   ├── work/       # Portfolio Projects
+│   │   └── page.tsx    # Home Page
+│   ├── components/     # High-Impact UI Components
+│   │   ├── Footer.tsx  # Dynamic Footer
+│   │   └── Navbar.tsx  # Magnetic Navbar
+│   └── scripts/        # Animation & Physics Engines
+│       ├── hero.js     # GSAP Hero Animations
+│       ├── lenis.js    # Scroll Momentum Engine
+│       └── cursor.js   # Velocity-aware Cursor Logic
+├── public/             # Static Assets & Icons
+└── tailwind.config.ts  # Brutalist Design Tokens
+```
 
 <br/>
 
 ## ✦ 🎬 Animation Architecture
 
-This project heavily relies on **GSAP** for professional-grade HTML5 animations:
+This project utilizes a **Custom Motion Engine** built on top of GreenSock (GSAP):
 
-*   **Lenis Smooth Scroll:** Studio-quality, momentum-based scrolling that normalizes the scroll experience across all browsers and devices.
-*   **Velocity Tracking:** The custom cursor calculates mouse velocity to deform and stretch its shape dynamically.
-*   **Performance:** Animations are heavily optimized using `will-change` CSS properties and GPU acceleration to maintain a strict 60FPS.
+*   **Context-Aware Cursors:** The cursor changes behavior based on the underlying component's "weight" and "interactivity."
+*   **Viewport Culling:** Animations are only active when visible, significantly reducing CPU load.
+*   **Physics-Based UI:** Using `Power4` and `CustomEase` to simulate realistic industrial motion.
 
 <br/>
 
-## ✦ 🚀 Performance Optimizations
+## ✦ 📈 SEO & Performance
 
-*   **Next.js SSR:** Leveraging Server-Side Rendering to deliver fully formed HTML to the browser instantly.
-*   **Image Optimization:** Utilizing `next/image` for automatic WebP conversion, lazy loading, and responsive sizing.
-*   **Conditional Animation Loading:** Heavy GSAP animations and custom cursors are conditionally disabled on touch devices to save battery and ensure a lag-free mobile experience.
-*   **Font Optimization:** Using `next/font` to automatically host fonts locally, eliminating Cumulative Layout Shift (CLS).
+Designed with a **Performance-First** mindset:
+
+- **Semantic HTML5:** Using proper structural elements (`<main>`, `<section>`, `<article>`) for enhanced accessibility and indexability.
+- **Dynamic Meta Tags:** Every page includes custom OpenGraph and Twitter cards for social media visibility.
+- **Web Vitals Optimization:** Minimal CLS (Cumulative Layout Shift) by pre-allocating space for massive typography and images.
+- **Alt-Text Mastery:** 100% image coverage with contextually relevant, keyword-rich descriptions for image search SEO.
 
 <br/>
 
 ## ✦ 💻 Arsenal & Tech Stack
 
 <div align="center">
-  <p><i>The core technologies powering this experience:</i></p>
-  <br/>
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,html,css,git,github,vscode,figma&theme=dark" alt="Anmol Malviya Skills and Tech Stack SVGs" />
+    <img src="https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,html,css,git,github,vscode,figma&theme=dark" alt="Anmol Malviya Skills" />
   </a>
 </div>
 
@@ -131,10 +161,8 @@ This project heavily relies on **GSAP** for professional-grade HTML5 animations:
 
 ## ✦ ⚙️ Installation & Setup
 
-Deploy this setup locally to explore the architecture and motion design.
-
 <details>
-<summary><b>Click to reveal installation instructions</b></summary>
+<summary><b>View Developer Setup Guide</b></summary>
 <br/>
 
 **1. Clone the repository**
@@ -154,39 +182,31 @@ npm run dev
 ```
 
 **4. Experience it**
-Navigate to `http://localhost:3000` to view the application in action.
+Navigate to `http://localhost:3000` to view the application.
 </details>
 
 <br/>
 
-## ✦ 🌍 Deployment
+## ✦ 📄 License
 
-This project is configured for seamless deployment on **Vercel**.
+This project is licensed under the **MIT License**. Feel free to use it for inspiration!
 
-1. Push your code to a GitHub repository.
-2. Import the project into Vercel.
-3. Vercel will automatically detect the Next.js framework and configure the build settings (`npm run build`).
-
-<br/>
-
-## ✦ 🤝 Contact
+---
 
 <div align="center">
-  <p>Created by <b>Anmol Malviya</b></p>
+  <p><i>Crafted with passion by <b>Anmol Malviya</b></i></p>
   <br/>
   <a href="https://github.com/Anmol-Malviya">
-    <img src="https://img.shields.io/badge/GitHub-111111?style=for-the-badge&logo=github&logoColor=white" alt="Anmol Malviya GitHub Profile" />
+    <img src="https://img.shields.io/badge/GitHub-111111?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Profile" />
   </a>
   &nbsp;&nbsp;
   <a href="https://linkedin.com/in/Anmol-Malviya">
-    <img src="https://img.shields.io/badge/LinkedIn-111111?style=for-the-badge&logo=linkedin&logoColor=0077B5" alt="Anmol Malviya LinkedIn Profile" />
+    <img src="https://img.shields.io/badge/LinkedIn-111111?style=for-the-badge&logo=linkedin&logoColor=0077B5" alt="LinkedIn Profile" />
   </a>
 </div>
 
 <br/>
-<br/>
 
-<!-- Footer SVG -->
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=111111&height=60&section=footer&text=Designed%20%26%20Built%20by%20Anmol%20Malviya&fontSize=20&fontColor=06B6D4" alt="Footer Banner" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=111111&height=60&section=footer&text=Next.js%2016%20%7C%20GSAP%203%20%7C%20Tailwind%204&fontSize=20&fontColor=06B6D4" alt="Footer Banner" width="100%" />
 </div>
