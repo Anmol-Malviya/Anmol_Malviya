@@ -41,93 +41,54 @@
   <img src="https://img.shields.io/badge/View_Live_Portfolio-111111?style=for-the-badge&logo=vercel&logoColor=white&logoWidth=20" alt="Live Demo" />
 </a>
 
-<br/><br/>
-
 </div>
-
----
 
 <br/>
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Card%20Index%20Dividers.png" alt="Card Index Dividers" width="35" height="35" style="vertical-align: middle;" /> Table of Contents
+## ✦ Table of Contents
 
-<table border="0" cellpadding="0" cellspacing="0" width="100%" style="text-align: left; font-size: 16px;">
-  <tr>
-    <td width="50%"><a href="#--project-overview"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" width="25" style="vertical-align: middle;" /> <b style="vertical-align: middle;">Project Overview</b></a></td>
-    <td width="50%"><a href="#--about-anmol-malviya---web-developer"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People%20with%20professions/Man%20Technologist%20Light%20Skin%20Tone.png" width="25" style="vertical-align: middle;" /> <b style="vertical-align: middle;">About Developer</b></a></td>
-  </tr>
-  <tr>
-    <td width="50%"><a href="#--key-features"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Sparkles.png" width="25" style="vertical-align: middle;" /> <b style="vertical-align: middle;">Key Features</b></a></td>
-    <td width="50%"><a href="#--project-roadmap"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Map.png" width="25" style="vertical-align: middle;" /> <b style="vertical-align: middle;">Project Roadmap</b></a></td>
-  </tr>
-  <tr>
-    <td width="50%"><a href="#--project-structure"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Building%20Construction.png" width="25" style="vertical-align: middle;" /> <b style="vertical-align: middle;">Project Structure</b></a></td>
-    <td width="50%"><a href="#--animation-architecture"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Clapper%20Board.png" width="25" style="vertical-align: middle;" /> <b style="vertical-align: middle;">Animation Architecture</b></a></td>
-  </tr>
-  <tr>
-    <td width="50%"><a href="#--seo--performance"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Chart%20Increasing.png" width="25" style="vertical-align: middle;" /> <b style="vertical-align: middle;">SEO & Performance</b></a></td>
-    <td width="50%"><a href="#--installation--setup"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Gear.png" width="25" style="vertical-align: middle;" /> <b style="vertical-align: middle;">Installation & Setup</b></a></td>
-  </tr>
-</table>
+- [Project Overview](#-project-overview)
+- [About the Developer](#-about-the-developer)
+- [Key Features](#-key-features)
+- [Project Roadmap](#-project-roadmap)
+- [Project Structure](#-project-structure)
+- [Animation Architecture](#-animation-architecture)
+- [SEO & Performance](#-seo--performance)
+- [Arsenal & Tech Stack](#-arsenal--tech-stack)
+- [Installation & Setup](#-installation--setup)
 
 ---
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" width="35" style="vertical-align: middle;" /> Project Overview
+## 🚀 Project Overview
 
-Welcome to the ultimate **creative developer portfolio** repository built by **Anmol Malviya**. As a professional **Web Developer**, I've designed this **website** to showcase the perfect intersection of **Brutalist Web Design** and advanced **Motion Graphics**. It pushes the boundaries of what a personal **web dev** portfolio can be.
+Welcome to the ultimate **creative developer portfolio** repository built by **Anmol Malviya**. As a professional **Web Developer**, I've designed this website to showcase the perfect intersection of **Brutalist Web Design** and advanced **Motion Graphics**. It pushes the boundaries of what a personal web dev portfolio can be.
 
 > *"Motion tells the story that words can only describe."*
 
-By leveraging **GSAP** for velocity-aware physics and **Next.js 16** for blazing-fast performance, this **portfolio website** offers a fluid, editorial-style experience that feels more like a cinematic piece than a traditional site. Whether you are looking for a **frontend developer**, **Next.js expert**, or **UI/UX developer**, this repository demonstrates top-tier coding practices.
+By leveraging **GSAP** for velocity-aware physics and **Next.js** for blazing-fast performance, this portfolio website offers a fluid, editorial-style experience that feels more like a cinematic piece than a traditional site. Whether you are looking for a frontend developer, Next.js expert, or UI/UX developer, this repository demonstrates top-tier coding practices.
 
 <br/>
 
-## ✦ 👨‍💻 About Anmol Malviya - Web Developer
+## 👨‍💻 About the Developer
 
-Hello! I am **Anmol Malviya**, a dedicated **Web Developer** specializing in creating immersive, high-end websites. This **portfolio website** showcases my expertise in modern **web dev** technologies. My goal as a **developer** is to build digital experiences that are not only visually stunning but also highly accessible and SEO-optimized.
+Hello! I am **Anmol Malviya**, a dedicated **Web Developer** specializing in creating immersive, high-end websites. This portfolio showcases my expertise in modern web development technologies. My goal is to build digital experiences that are not only visually stunning but also highly accessible and SEO-optimized.
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Anmol-Malviya&show_icons=true&theme=radical&hide_border=true&bg_color=111111&title_color=06B6D4&icon_color=06B6D4&text_color=ffffff" alt="Anmol Malviya GitHub Stats | Web Developer" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Anmol-Malviya&show_icons=true&theme=radical&hide_border=true&bg_color=111111&title_color=06B6D4&icon_color=06B6D4&text_color=ffffff" alt="Anmol Malviya GitHub Stats" />
 </p>
 
 <br/>
 
-## ✦ 🌐 Live Demo
+## ✨ Key Features
 
-You can view the fully animated, high-performance portfolio live at:
-**[View Live Portfolio](https://your-live-link-here.vercel.app)**
-
-
-<br/>
-
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Sparkles.png" width="35" style="vertical-align: middle;" /> Key Features
-
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
-  <tr>
-    <td width="50%" valign="top">
-      <h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/High-Speed%20Train.png" width="25" style="vertical-align: middle;" /> High-Velocity Transitions</h3>
-      <p>Custom page transitions that calculate exit and entry velocities to maintain momentum during navigation. Perfect for an immersive <b>web dev</b> experience.</p>
-    </td>
-    <td width="50%" valign="top">
-      <h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Magnet.png" width="25" style="vertical-align: middle;" /> Magnetic Physics</h3>
-      <p>UI elements that possess "mass" and "gravitational pull," reacting dynamically to the user's cursor proximity for a premium <b>website</b> feel.</p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Wind%20Face.png" width="25" style="vertical-align: middle;" /> Smooth Momentum Scroll</h3>
-      <p>Powered by <b>Lenis</b>, providing a synchronized scroll experience that enables perfect <b>GSAP</b> animation timing.</p>
-    </td>
-    <td width="50%" valign="top">
-      <h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Hammer%20and%20Wrench.png" width="25" style="vertical-align: middle;" /> Brutalist Grid System</h3>
-      <p>A "Bulky" architectural layout using high-contrast borders and massive typography designed by <b>Anmol Malviya</b>.</p>
-    </td>
-  </tr>
-</table>
+- 🚄 **High-Velocity Transitions:** Custom page transitions that calculate exit and entry velocities to maintain momentum during navigation.
+- 🧲 **Magnetic Physics:** UI elements that possess "mass" and "gravitational pull," reacting dynamically to the user's cursor proximity.
+- 🌬️ **Smooth Momentum Scroll:** Powered by **Lenis**, providing a synchronized scroll experience that enables perfect GSAP animation timing.
+- 🏗️ **Brutalist Grid System:** A "Bulky" architectural layout using high-contrast borders and massive typography.
 
 <br/>
 
-## ✦ 🗺️ Project Roadmap
+## 🗺️ Project Roadmap
 
 - [x] **Phase 1:** Core Architecture (Next.js 16 + TypeScript)
 - [x] **Phase 2:** Design System Implementation (Brutalist + Tailwind 4)
@@ -138,7 +99,7 @@ You can view the fully animated, high-performance portfolio live at:
 
 <br/>
 
-## ✦ 🏗️ Project Structure
+## 📂 Project Structure
 
 ```text
 gsap-portfolio-nextjs/
@@ -160,40 +121,40 @@ gsap-portfolio-nextjs/
 
 <br/>
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Clapper%20Board.png" width="35" style="vertical-align: middle;" /> Animation Architecture
+## 🎬 Animation Architecture
 
-This project utilizes a **Custom Motion Engine** built on top of GreenSock (GSAP), showcasing high-level **frontend developer** skills:
+This project utilizes a **Custom Motion Engine** built on top of GreenSock (GSAP):
 
-- <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Computer%20Mouse.png" width="20" style="vertical-align: middle;" /> **Context-Aware Cursors:** The cursor changes behavior based on the underlying component's "weight" and "interactivity."
-- <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Desktop%20Computer.png" width="20" style="vertical-align: middle;" /> **Viewport Culling:** Animations are only active when visible, significantly reducing CPU load for maximum **website** performance.
-- <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Balance%20Scale.png" width="20" style="vertical-align: middle;" /> **Physics-Based UI:** Using `Power4` and `CustomEase` to simulate realistic industrial motion.
-
-<br/>
-
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Chart%20Increasing.png" width="35" style="vertical-align: middle;" /> SEO & Performance
-
-Designed with a **Performance-First** mindset by a dedicated **Web Developer**:
-
-- <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Magnifying%20Glass%20Tilted%20Right.png" width="20" style="vertical-align: middle;" /> **Semantic HTML5:** Using proper structural elements for enhanced accessibility and **SEO** indexability.
-- <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Label.png" width="20" style="vertical-align: middle;" /> **Dynamic Meta Tags:** Every page includes custom OpenGraph and Twitter cards for social media visibility.
-- <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Stopwatch.png" width="20" style="vertical-align: middle;" /> **Web Vitals Optimization:** Minimal CLS (Cumulative Layout Shift) by pre-allocating space for massive typography and images.
-- <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Framed%20Picture.png" width="20" style="vertical-align: middle;" /> **Alt-Text Mastery:** 100% image coverage with contextually relevant, keyword-rich descriptions for image search **SEO**.
+- 🖱️ **Context-Aware Cursors:** The cursor changes behavior based on the underlying component's "weight" and "interactivity."
+- 🖥️ **Viewport Culling:** Animations are only active when visible, significantly reducing CPU load for maximum website performance.
+- ⚖️ **Physics-Based UI:** Using `Power4` and `CustomEase` to simulate realistic industrial motion.
 
 <br/>
 
-## ✦ 💻 Arsenal & Tech Stack
+## 📈 SEO & Performance
+
+Designed with a **Performance-First** mindset:
+
+- 🔍 **Semantic HTML5:** Using proper structural elements for enhanced accessibility and SEO indexability.
+- 🏷️ **Dynamic Meta Tags:** Every page includes custom OpenGraph and Twitter cards for social media visibility.
+- ⏱️ **Web Vitals Optimization:** Minimal CLS (Cumulative Layout Shift) by pre-allocating space for massive typography and images.
+- 🖼️ **Alt-Text Mastery:** 100% image coverage with contextually relevant, keyword-rich descriptions for image search SEO.
+
+<br/>
+
+## 💻 Arsenal & Tech Stack
 
 <div align="center">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,html,css,git,github,vscode,figma&theme=dark" alt="Anmol Malviya Web Developer Skills" />
   </a>
   <br/><br/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Anmol-Malviya&theme=radical&hide_border=true&background=111111&ring=06B6D4&fire=06B6D4&currStreakNum=ffffff" alt="Anmol Malviya GitHub Streak | Web Dev" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Anmol-Malviya&theme=radical&hide_border=true&background=111111&ring=06B6D4&fire=06B6D4&currStreakNum=ffffff" alt="Anmol Malviya GitHub Streak" />
 </div>
 
 <br/>
 
-## ✦ ⚙️ Installation & Setup
+## ⚙️ Installation & Setup
 
 <details>
 <summary><b>View Developer Setup Guide</b></summary>
@@ -221,7 +182,7 @@ Navigate to `http://localhost:3000` to view the application.
 
 <br/>
 
-## ✦ 📄 License
+## 📄 License
 
 This project is licensed under the **MIT License**. Feel free to use it for inspiration!
 
