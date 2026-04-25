@@ -352,7 +352,8 @@ p.mn {
 
   .contact-cta {
     height: auto;
-    padding: 3em 1.5em 4em;
+    min-height: 0; /* Remove full-height requirement on mobile */
+    padding: 2em 1.5em;
     align-items: stretch;
   }
 
@@ -360,63 +361,75 @@ p.mn {
     width: 100%;
     height: auto;
     min-height: 0;
-    border-radius: 2em;
-    padding: 3em 2em;
-    gap: 1.2em;
+    border-radius: 1.5em;
+    padding: 2rem 1.5rem;
+    gap: 1rem;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     text-align: left;
-    animation: ctaPulse 3s ease-in-out infinite;
+    animation: ctaPulse 3.5s ease-in-out infinite;
   }
 
   .contact-cta .contact-stats {
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 0.8rem;
+    width: 100%;
   }
 
-  .contact-cta .contact-text-small {
-    width: 100%;
-    text-align: left;
+  .contact-cta .contact-stat .stat-value {
+    font-size: 1.2rem;
+  }
+
+  .contact-cta .contact-stat .stat-label {
+    font-size: 0.6rem;
   }
 
   .contact-cta .contact-text-small p {
-    font-size: 0.7rem;
-    letter-spacing: 0.3em;
-  }
-
-  .contact-cta .contact-text-large {
-    width: 100%;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
   }
 
   .contact-cta .contact-text-large .contact-cta-heading {
-    font-size: clamp(2.8rem, 14vw, 5rem);
+    font-size: clamp(2.2rem, 10vw, 3.8rem);
     text-align: left;
     line-height: 0.95;
     letter-spacing: -0.04em;
   }
 
-  /* Rocket icon — float to bottom right */
   .contact-cta .rocket-container {
     position: absolute;
-    bottom: 2em;
-    right: 2em;
-    width: 48px;
-    height: 48px;
-    opacity: 0.5;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 32px;
+    height: 32px;
+    opacity: 0.2;
+    transform: rotate(-15deg);
   }
 }
 
 @media (max-width: 480px) {
   .contact-cta {
-    padding: 2.5em 1.2em 3em;
+    padding: 1.5rem 1rem;
   }
 
   .contact-cta .contact-button {
-    padding: 2.5em 1.6em;
-    border-radius: 1.5em;
+    padding: 1.5rem 1.25rem;
+    border-radius: 1.25em;
+  }
+
+  .contact-cta .contact-stats {
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .contact-cta .contact-stat .stat-value {
+    font-size: 1rem;
   }
 
   .contact-cta .contact-text-large .contact-cta-heading {
-    font-size: clamp(2.4rem, 13vw, 4rem);
+    font-size: clamp(1.8rem, 10vw, 2.5rem);
   }
 }

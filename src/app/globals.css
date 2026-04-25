@@ -42,9 +42,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Force hide default OS cursor globally for premium custom cursor experience */
-html, body, a, button, input, textarea, label, [role="button"], .interactive {
-  cursor: none !important;
+/* Hide default cursor only on devices that support hover for custom cursor experience */
+@media (hover: hover) and (pointer: fine) {
+  html, body, a, button, input, textarea, label, [role="button"], .interactive {
+    cursor: none !important;
+  }
 }
 
 body {

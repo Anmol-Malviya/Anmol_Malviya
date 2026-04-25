@@ -71,7 +71,7 @@ export default function Cursor() {
       {/* Lagged outer cursor */}
       <div
         ref={outerRef}
-        className="fixed pointer-events-none z-[9999] transition-transform duration-300"
+        className="hidden md:block fixed pointer-events-none z-[9999] transition-transform duration-300"
         style={{ width: 35, height: 35, willChange: "left, top, transform" }}
       >
         <svg
@@ -152,7 +152,7 @@ export default function Cursor() {
       {/* Snappy inner dot — follows mouse instantly */}
       <div
         ref={dotRef}
-        className="fixed pointer-events-none z-[10000]"
+        className="hidden md:block fixed pointer-events-none z-[10000]"
         style={{
           width: 6,
           height: 6,
