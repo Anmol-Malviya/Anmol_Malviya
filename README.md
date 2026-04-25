@@ -62,7 +62,7 @@ By leveraging **GSAP** for velocity-aware physics and **Next.js 16** for blazing
 
 <div align="center">
   <a href="https://your-live-link-here.vercel.app">
-    <img src="public/images/hero/image-1.jpg" alt="Portfolio Preview" width="80%" style="border-radius: 10px; margin-bottom: 20px; border: 2px solid #333;" />
+    <img src="public/image.png" alt="Portfolio Preview" width="80%" style="border-radius: 10px; margin-bottom: 20px; border: 2px solid #333;" />
   </a>
   <br/><br/>
   <a href="https://your-live-link-here.vercel.app">
