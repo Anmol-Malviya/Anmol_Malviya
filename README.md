@@ -49,18 +49,26 @@
 
 <br/>
 
-## 📋 Table of Contents
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Card%20Index%20Dividers.png" alt="Card Index Dividers" width="35" height="35" style="vertical-align: middle;" /> Table of Contents
 
-- [Project Overview](#-project-overview)
-- [Live Demo](#-live-demo)
-- [Key Features](#-key-features)
-- [Project Roadmap](#-project-roadmap)
-- [Technical Stack](#-technical-stack)
-- [Project Structure](#-project-structure)
-- [Animation Architecture](#-animation-architecture)
-- [SEO & Performance](#-seo--performance)
-- [Installation & Setup](#-installation--setup)
-- [License](#-license)
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style="text-align: left; font-size: 16px;">
+  <tr>
+    <td width="50%"><a href="#--project-overview"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" width="25" style="vertical-align: middle;" /> <b style="vertical-align: middle;">Project Overview</b></a></td>
+    <td width="50%"><a href="#--about-anmol-malviya---web-developer"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People%20with%20professions/Man%20Technologist%20Light%20Skin%20Tone.png" width="25" style="vertical-align: middle;" /> <b style="vertical-align: middle;">About Developer</b></a></td>
+  </tr>
+  <tr>
+    <td width="50%"><a href="#--key-features"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Sparkles.png" width="25" style="vertical-align: middle;" /> <b style="vertical-align: middle;">Key Features</b></a></td>
+    <td width="50%"><a href="#--project-roadmap"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Map.png" width="25" style="vertical-align: middle;" /> <b style="vertical-align: middle;">Project Roadmap</b></a></td>
+  </tr>
+  <tr>
+    <td width="50%"><a href="#--project-structure"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Building%20Construction.png" width="25" style="vertical-align: middle;" /> <b style="vertical-align: middle;">Project Structure</b></a></td>
+    <td width="50%"><a href="#--animation-architecture"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Clapper%20Board.png" width="25" style="vertical-align: middle;" /> <b style="vertical-align: middle;">Animation Architecture</b></a></td>
+  </tr>
+  <tr>
+    <td width="50%"><a href="#--seo--performance"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Chart%20Increasing.png" width="25" style="vertical-align: middle;" /> <b style="vertical-align: middle;">SEO & Performance</b></a></td>
+    <td width="50%"><a href="#--installation--setup"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Gear.png" width="25" style="vertical-align: middle;" /> <b style="vertical-align: middle;">Installation & Setup</b></a></td>
+  </tr>
+</table>
 
 ---
 
