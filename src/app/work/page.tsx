@@ -73,10 +73,10 @@ export default function Work() {
                 </div>
                 <div className="work-item">
                     <div className="work-item-img">
-                        <img src="/images/projects/project-2.png" alt="Vyorai AI Interviewer - Full-Stack AI App by Anmol Malviya" loading="lazy" />
+                        <img src="/images/projects/project-2.png" alt="AI Interviewer - Full-Stack AI App by Anmol Malviya" loading="lazy" />
                     </div>
                     <div className="work-item-content">
-                        <h2>Vyorai AI Interviewer</h2>
+                        <h2>AI Interviewer</h2>
                         <div className="work-item-meta">
                             <p className="mn">02</p>
                             <p className="mn">Full-Stack / AI</p>

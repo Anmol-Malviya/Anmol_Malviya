@@ -139,7 +139,7 @@ export default function Home() {
                 <h4>Featured Projects</h4>
                 <div className="resume-projects">
                   <div className="resume-project">
-                    <span className="project-name">Vyorai AI Interviewer</span>
+                    <span className="project-name">AI Interviewer</span>
                     <span className="project-tech">Full-Stack / AI</span>
                   </div>
                   <div className="resume-project">

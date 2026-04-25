@@ -37,7 +37,7 @@ export default function WorkLayout({ children }: { children: React.ReactNode }) 
                 {
                   "@type": "ListItem",
                   "position": 2,
-                  "name": "Vyorai AI Interviewer"
+                  "name": "AI Interviewer"
                 },
                 {
                   "@type": "ListItem",
