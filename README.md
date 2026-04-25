@@ -8,7 +8,8 @@
 <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=800&size=26&duration=3000&pause=1000&color=06B6D4&center=true&vCenter=true&width=600&lines=Crafting+Brutalist+Web+Experiences;Next.js+%2B+GSAP+Specialist;Building+High-Performance+UIs" alt="Anmol Malviya - Next.js and GSAP Specialist" />
 
 <p align="center">
-  <strong>A high-performance, brutalist-inspired creative developer portfolio. Optimized for speed, motion, and SEO.</strong>
+  <strong>Anmol Malviya - Creative Web Developer Portfolio Website</strong><br>
+  <em>A high-performance, brutalist-inspired website built by a passionate web developer. Optimized for speed, motion, and SEO. If you are looking for a top-tier web dev, you found the right place.</em>
 </p>
 
 <!-- SVG Tech Badges -->
@@ -65,11 +66,21 @@
 
 ## ✦ 🚀 Project Overview
 
-Welcome to the ultimate **creative developer portfolio** repository. This project is a specialized implementation focusing on the intersection of **Brutalist Web Design** and advanced **Motion Graphics**. It's designed to push the boundaries of what a personal portfolio can be.
+Welcome to the ultimate **creative developer portfolio** repository built by **Anmol Malviya**. This project is a specialized **website** implementation focusing on the intersection of **Brutalist Web Design** and advanced **Motion Graphics**. It's designed to push the boundaries of what a personal **web dev** portfolio can be.
 
 > *"Motion tells the story that words can only describe."*
 
-By leveraging **GSAP** for velocity-aware physics and **Next.js 16** for blazing fast performance, this site offers a fluid, editorial-style experience that feels more like a cinematic piece than a traditional website.
+By leveraging **GSAP** for velocity-aware physics and **Next.js 16** for blazing fast performance, this **website** offers a fluid, editorial-style experience that feels more like a cinematic piece than a traditional site.
+
+<br/>
+
+## ✦ 👨‍💻 About Anmol Malviya - Web Developer
+
+Hello! I am **Anmol Malviya**, a dedicated **Web Developer** specializing in creating immersive, high-end websites. This **portfolio website** showcases my expertise in modern **web dev** technologies. My goal as a **developer** is to build digital experiences that are not only visually stunning but also highly accessible and SEO-optimized.
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Anmol-Malviya&show_icons=true&theme=radical&hide_border=true&bg_color=111111&title_color=06B6D4&icon_color=06B6D4&text_color=ffffff" alt="Anmol Malviya GitHub Stats | Web Developer" />
+</p>
 
 <br/>
 
@@ -166,8 +177,10 @@ Designed with a **Performance-First** mindset:
 
 <div align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,html,css,git,github,vscode,figma&theme=dark" alt="Anmol Malviya Skills" />
+    <img src="https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,html,css,git,github,vscode,figma&theme=dark" alt="Anmol Malviya Web Developer Skills" />
   </a>
+  <br/><br/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Anmol-Malviya&theme=radical&hide_border=true&background=111111&ring=06B6D4&fire=06B6D4&currStreakNum=ffffff" alt="Anmol Malviya GitHub Streak | Web Dev" />
 </div>
 
 <br/>
