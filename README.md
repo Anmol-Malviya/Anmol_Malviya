@@ -27,6 +27,21 @@
   <img src="https://img.shields.io/badge/SEO-100-06B6D4?style=flat-square&logo=lighthouse&logoColor=white" alt="SEO Score" />
 </p>
 
+<br/>
+
+<!-- Portfolio Preview Image -->
+<a href="https://your-live-link-here.vercel.app">
+  <img src="public/image.png" alt="Portfolio Preview" width="90%" style="border-radius: 12px; border: 1px solid #333; box-shadow: 0 0 20px rgba(6, 182, 212, 0.15);" />
+</a>
+
+<br/><br/>
+
+<a href="https://your-live-link-here.vercel.app">
+  <img src="https://img.shields.io/badge/View_Live_Portfolio-111111?style=for-the-badge&logo=vercel&logoColor=white&logoWidth=20" alt="Live Demo" />
+</a>
+
+<br/><br/>
+
 </div>
 
 ---
@@ -60,15 +75,9 @@ By leveraging **GSAP** for velocity-aware physics and **Next.js 16** for blazing
 
 ## ✦ 🌐 Live Demo
 
-<div align="center">
-  <a href="https://your-live-link-here.vercel.app">
-    <img src="public/image.png" alt="Portfolio Preview" width="80%" style="border-radius: 10px; margin-bottom: 20px; border: 2px solid #333;" />
-  </a>
-  <br/><br/>
-  <a href="https://your-live-link-here.vercel.app">
-    <img src="https://img.shields.io/badge/View_Live_Portfolio-111111?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo" />
-  </a>
-</div>
+You can view the fully animated, high-performance portfolio live at:
+**[View Live Portfolio](https://your-live-link-here.vercel.app)**
+
 
 <br/>
 
