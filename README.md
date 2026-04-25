@@ -31,13 +31,13 @@
 <br/>
 
 <!-- Portfolio Preview Image -->
-<a href="https://your-live-link-here.vercel.app">
+<a href="https://anmolmalviya07.vercel.app/">
   <img src="public/image.png" alt="Portfolio Preview" width="90%" style="border-radius: 12px; border: 1px solid #333; box-shadow: 0 0 20px rgba(6, 182, 212, 0.15);" />
 </a>
 
 <br/><br/>
 
-<a href="https://your-live-link-here.vercel.app">
+<a href="https://anmolmalviya07.vercel.app/">
   <img src="https://img.shields.io/badge/View_Live_Portfolio-111111?style=for-the-badge&logo=vercel&logoColor=white&logoWidth=20" alt="Live Demo" />
 </a>
 
