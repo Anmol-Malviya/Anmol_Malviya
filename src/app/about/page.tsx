@@ -304,6 +304,20 @@ export default function About() {
               </div>
             </a>
 
+            <a href="/certifications/kriyeta-participation.pdf" target="_blank" rel="noopener noreferrer" className="award-row" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div className="award-rank">PART.</div>
+              <div className="award-details">
+                <h3>KRIYETA 5.0 Hackathon</h3>
+                <p className="ss">Participated in a 36-hour long hackathon. Demonstrated exceptional technical expertise and innovation.</p>
+              </div>
+              <div className="award-meta">
+                <span className="mn cert-view" style={{ fontSize: '0.65rem' }}>Certificate ↗</span>
+                <div className="award-icon-wrapper">
+                  <Cpu size={24} strokeWidth={1.5} />
+                </div>
+              </div>
+            </a>
+
             <a href="/certifications/symbiosis-hackathon.pdf" target="_blank" rel="noopener noreferrer" className="award-row" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div className="award-rank">PART.</div>
               <div className="award-details">
