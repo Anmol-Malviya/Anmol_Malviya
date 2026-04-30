@@ -2,6 +2,7 @@
 import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { Shield, Cpu, Briefcase, Award, Trophy, Medal } from 'lucide-react';
 
 export default function About() {
   useEffect(() => {
@@ -35,7 +36,7 @@ export default function About() {
       <Navbar />
 
       <div className="page about-page">
-        <h1 className="sr-only">About Anmol Malviya - Full Stack Developer</h1>
+        <h1 className="sr-only">About Anmol Malviya - Senior Full Stack + AI Developer</h1>
 
         {/* About Hero */}
         <section className="about-hero">
@@ -70,23 +71,23 @@ export default function About() {
 
             {/* Bio Card */}
             <div className="about-hero-bio">
-              <p className="mn">// Full-Stack Developer & UI/UX Designer</p>
+              <p className="mn">// Senior Full Stack + AI Developer</p>
               
               <div className="bio-content">
                 <p className="ss lead">
-                  Hello, I am <strong>Anmol Malviya</strong>, a dedicated Full Stack Developer and UI/UX Designer based in India. My journey is defined by a relentless pursuit of crafting award-winning digital experiences that blend engineering precision with compelling visual storytelling.
+                  I&apos;m <strong>Anmol Malviya</strong>, a Full Stack + AI Developer focused on building scalable web applications, mobile apps, and modern digital experiences.
                 </p>
                 
                 <p className="ss">
-                  As a specialized <span className="highlight">React & Next.js expert</span>, I architect robust, highly performant front-end systems that prioritize user experience, accessibility, and modern web standards. 
+                  Currently, I work as a <span className="highlight">Senior Developer at Adhritverse</span> and contribute as an Intern at <span className="highlight">VyorAI</span>, where I gain real-world experience in development and AI-driven systems.
                 </p>
 
                 <p className="ss">
-                  In my role as a <span className="highlight">Node.js Developer</span>, I engineer scalable, secure backend infrastructures. My portfolio showcases diverse projects where I leverage the <strong>MERN stack</strong> alongside animation libraries like <strong>GSAP</strong> to deliver interactive, immersive websites.
+                  I specialize in the <strong>MERN stack, Next.js, mobile app development</strong>, and integrating AI into real-world applications to build intelligent, high-performance solutions.
                 </p>
 
                 <p className="ss">
-                  Beyond writing clean code, I possess a deep passion for <strong>UI/UX design</strong>. Whether optimizing core web vitals for SEO, building responsive layouts, or implementing micro-interactions, my goal is to create products that leave a lasting impact. Let&apos;s build something extraordinary together.
+                  Based in <strong>Madhya Pradesh, India</strong>, I am currently pursuing my B.Tech at PIEMR Indore, continuing my mission to create products that leave a lasting impact.
                 </p>
               </div>
 
@@ -129,15 +130,107 @@ export default function About() {
             <p className="mn">Node.js</p>
           </div>
           <div className="tag" id="tag-5">
-            <p className="mn">UI/UX</p>
+            <p className="mn">AI / ML</p>
           </div>
         </section>
 
-        {/* Skills Section */}
-        <section className="skills">
-          <div className="skills-copy">
-            <p className="mn">// Tech Stack</p>
-            <h2>What I Work With</h2>
+        <section className="timeline-section">
+          <div className="cert-header">
+            <p className="mn">// Professional Journey</p>
+            <h2 className="header-split">
+              <span>Work</span>
+              <span className="outline-text">Experience</span>
+            </h2>
+          </div>
+
+          <div className="timeline-container">
+            <div className="timeline-card">
+              <span className="timeline-date mn">PRESENT</span>
+              <h3>Senior Developer</h3>
+              <span className="company">Adhritverse</span>
+              <ul className="ss">
+                <li>Developing scalable web applications</li>
+                <li>Building modern UI systems using React & Tailwind</li>
+                <li>Optimizing performance and frontend architecture</li>
+              </ul>
+            </div>
+
+            <div className="timeline-card">
+              <span className="timeline-date mn">2024 - PRESENT</span>
+              <h3>Developer Intern</h3>
+              <span className="company">VyorAI</span>
+              <ul className="ss">
+                <li>Working on AI-driven workflows and automation</li>
+                <li>Contributing to startup-level product development</li>
+                <li>Rapid prototyping and experimentation</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className="timeline-section" style={{ paddingTop: 0 }}>
+          <div className="cert-header">
+            <p className="mn">// Academic Foundation</p>
+            <h2 className="header-split">
+              <span>Educational</span>
+              <span className="outline-text">Background</span>
+            </h2>
+          </div>
+
+          <div className="timeline-container">
+            <div className="timeline-card">
+              <span className="timeline-date mn">PURSUING (2023-2027)</span>
+              <h3>B.Tech in Computer Science</h3>
+              <span className="company">PIEMR Indore · 4th Sem</span>
+              <ul className="ss">
+                <li>Specializing in AI & Full Stack Development</li>
+                <li>Active member of technical and AI clubs</li>
+              </ul>
+            </div>
+
+            <div className="timeline-card">
+              <span className="timeline-date mn">GRADUATED 2023</span>
+              <h3>Diploma in CS Engineering</h3>
+              <span className="company">Govt. Polytechnic College, Itarsi</span>
+              <ul className="ss">
+                <li>Foundational engineering principles</li>
+                <li>Core computer science subjects and practical labs</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Internships Section */}
+        <section className="about-internships certifications">
+          <div className="cert-header">
+            <p className="mn">// Practical Training</p>
+            <h2>Internships & Roles</h2>
+          </div>
+
+          <div className="cert-list">
+            <a href="/certifications/eventdhara-offer-letter.pdf" target="_blank" rel="noopener noreferrer" className="cert-item" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div className="cert-info">
+                <h3>Data Science Intern</h3>
+                <p className="mn">EventDhara · 3 Months</p>
+              </div>
+              <div className="cert-date mn">View Offer ↗</div>
+            </a>
+
+            <a href="/certifications/nexisparkx-internship-cert.pdf" target="_blank" rel="noopener noreferrer" className="cert-item" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div className="cert-info">
+                <h3>AI Trainee Intern</h3>
+                <p className="mn">NexisparkX Technologies · 2 Months</p>
+              </div>
+              <div className="cert-date mn">View Cert ↗</div>
+            </a>
+
+            <a href="/certifications/kamarta-internship-cert.pdf" target="_blank" rel="noopener noreferrer" className="cert-item" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div className="cert-info">
+                <h3>Field Tech Executive</h3>
+                <p className="mn">Kamarta Robotics · Networking & Troubleshooting</p>
+              </div>
+              <div className="cert-date mn">View Cert ↗</div>
+            </a>
           </div>
         </section>
 
@@ -149,18 +242,153 @@ export default function About() {
               <h2>Measurable Impact</h2>
             </div>
             <div className="stats-item-1 stats-col">
-              <h2>2+</h2>
-              <p className="mn">Years of Experience</p>
+              <h2>Senior</h2>
+              <p className="mn">Full Stack + AI Developer</p>
             </div>
             <div className="stats-item-2 stats-col">
-              <h2>20+</h2>
+              <h2>10+</h2>
               <p className="mn">Projects Delivered</p>
             </div>
           </div>
-          <div className="stats-row">
-            <div className="stats-item-3 stats-col">
-              <h2>100%</h2>
-              <p className="mn">Client Satisfaction Rate</p>
+        </section>
+
+        <section className="hackathon-section">
+          <div className="cert-header">
+            <p className="mn">// Recognition</p>
+            <h2 className="header-split">
+              <span>Hackathons</span>
+              <span className="outline-text">& Awards</span>
+            </h2>
+          </div>
+
+          <div className="awards-leaderboard">
+            <a href="/certifications/cyberthinker-competition-cert.pdf" target="_blank" rel="noopener noreferrer" className="award-row" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div className="award-rank">1ST</div>
+              <div className="award-details">
+                <h3>CyberThinker Competition</h3>
+                <p className="ss">Organized by GeeksforGeeks Student Chapter PIEMR in collaboration with Safeclicks.</p>
+              </div>
+              <div className="award-meta">
+                <span className="mn cert-view" style={{ fontSize: '0.65rem' }}>Top Scorer ↗</span>
+                <div className="award-icon-wrapper">
+                  <Medal size={24} strokeWidth={1.5} />
+                </div>
+              </div>
+            </a>
+
+            <a href="/certifications/techsprint-hackathon-cert.pdf" target="_blank" rel="noopener noreferrer" className="award-row" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div className="award-rank">2ND</div>
+              <div className="award-details">
+                <h3>TechSprint Hackathon</h3>
+                <p className="ss">First Runner-Up. Organized by Google Developer Groups on Campus (GDGoC), PIEMR.</p>
+              </div>
+              <div className="award-meta">
+                <span className="mn cert-view" style={{ fontSize: '0.65rem' }}>View Details ↗</span>
+                <div className="award-icon-wrapper">
+                  <Trophy size={24} strokeWidth={1.5} />
+                </div>
+              </div>
+            </a>
+
+            <a href="/certifications/codestorm-hackathon-cert.pdf" target="_blank" rel="noopener noreferrer" className="award-row" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div className="award-rank">PART.</div>
+              <div className="award-details">
+                <h3>CODESTORM Hackathon</h3>
+                <p className="ss">PIEMR AI Club. Demonstrated excellence in innovation, collaboration, and problem-solving.</p>
+              </div>
+              <div className="award-meta">
+                <span className="mn cert-view" style={{ fontSize: '0.65rem' }}>View Details ↗</span>
+                <div className="award-icon-wrapper">
+                  <Cpu size={24} strokeWidth={1.5} />
+                </div>
+              </div>
+            </a>
+
+            <a href="/certifications/symbiosis-hackathon.pdf" target="_blank" rel="noopener noreferrer" className="award-row" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div className="award-rank">PART.</div>
+              <div className="award-details">
+                <h3>Symbiosis Skill Hackathon</h3>
+                <p className="ss">Active participation in a 36-hour national-level hackathon organized by SUAS, Indore.</p>
+              </div>
+              <div className="award-meta">
+                <span className="mn cert-view" style={{ fontSize: '0.65rem' }}>Certificate ↗</span>
+                <div className="award-icon-wrapper">
+                  <Medal size={24} strokeWidth={1.5} />
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        {/* Certifications Section */}
+        <section className="certifications-premium">
+          <div className="cert-header">
+            <p className="mn">// Validation & Expertise</p>
+            <h2 className="header-split">
+              <span>Certifications</span>
+              <span className="outline-text">& Credentials</span>
+            </h2>
+          </div>
+
+          <div className="cert-bento-grid">
+            <div className="cert-card large">
+              <div className="cert-noise"></div>
+              <div className="cert-badge">
+                <Shield size={24} strokeWidth={1.5} />
+              </div>
+              <div className="cert-card-main">
+                <p className="mn card-tag">MPSSDEGB & IIT Jodhpur</p>
+                <h3>Cyber Security <br/> Excellence Program</h3>
+                <p className="ss">Comprehensive program by IIT Jodhpur Technology Innovation & Start-up Centre (TISC).</p>
+              </div>
+              <div className="cert-card-footer">
+                <div className="cert-date mn">Class of 2025</div>
+                <a href="/certifications/cyber-security-excellence-cert.pdf" target="_blank" rel="noopener noreferrer" className="cert-view mn" style={{ textDecoration: 'none' }}>View Certificate ↗</a>
+              </div>
+            </div>
+
+            <div className="cert-card small">
+              <div className="cert-noise"></div>
+              <div className="cert-badge">
+                <Cpu size={24} strokeWidth={1.5} />
+              </div>
+              <div className="cert-card-content">
+                <p className="mn card-tag">Workshop</p>
+                <h3>Prompt <br/> Engineering</h3>
+                <p className="ss">Neurons School of Innovation & AI. Explored cutting-edge advancements.</p>
+              </div>
+              <a href="/certifications/prompt-engineering-cert.pdf" target="_blank" rel="noopener noreferrer" className="cert-view-small mn" style={{ textDecoration: 'none' }}>Verify ↗</a>
+            </div>
+
+            <div className="cert-card small">
+              <div className="cert-noise"></div>
+              <div className="cert-badge">
+                <Briefcase size={24} strokeWidth={1.5} />
+              </div>
+              <div className="cert-card-content">
+                <p className="mn card-tag">HostKash</p>
+                <h3>Summer <br/> Internship</h3>
+                <p className="ss">Successfully completed a 4-week internship program.</p>
+              </div>
+              <a href="/certifications/hostkash-internship-cert.pdf" target="_blank" rel="noopener noreferrer" className="cert-view-small mn" style={{ textDecoration: 'none' }}>Verify ↗</a>
+            </div>
+
+            <div className="cert-card medium">
+              <div className="cert-noise"></div>
+              <div className="cert-card-flex">
+                <div className="cert-badge">
+                  <Award size={24} strokeWidth={1.5} />
+                </div>
+                <div className="cert-card-content">
+                  <p className="mn card-tag">UNNATI Foundation</p>
+                  <h3>UNXT Soft Skill Program</h3>
+                  <p className="ss">165 hours of training in Spoken English, Employability, and Life Skills.</p>
+                </div>
+              </div>
+              <div className="cert-card-footer">
+                <div className="cert-date mn">Certified 2024</div>
+                <a href="/certifications/UNXT-Soft-Skill-Program.pdf" target="_blank" rel="noopener noreferrer" className="cert-view mn" style={{ textDecoration: 'none' }}>View ↗</a>
+              </div>
             </div>
           </div>
         </section>

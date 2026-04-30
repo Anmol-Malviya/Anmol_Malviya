@@ -238,6 +238,44 @@ export default function init() {
       });
     });
 
+    // Certifications reveal animation (Per-section for better reliability)
+    const certSections = document.querySelectorAll(".certifications, .certifications-premium");
+    certSections.forEach((section) => {
+      const items = section.querySelectorAll(".cert-item, .cert-card");
+      if (items.length > 0) {
+        const certAnimation = gsap.fromTo(
+          items,
+          {
+            y: 50,
+            opacity: 0,
+            scale: 0.9
+          },
+          {
+            y: 0,
+            opacity: 1,
+            scale: 1,
+            stagger: 0.15,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: section,
+              start: "top 90%",
+              toggleActions: "play none none none",
+              onEnter: () => {
+                // Ensure visibility if something went wrong
+                gsap.set(items, { opacity: 1, visibility: "visible" });
+              }
+            },
+            overwrite: true
+          }
+        );
+        if (certAnimation.scrollTrigger) {
+          scrollTriggerInstances.push(certAnimation.scrollTrigger);
+        }
+      }
+    });
+    // Refresh ScrollTrigger to ensure all markers and triggers are correct
+    ScrollTrigger.refresh();
   };
 
   // Run animations on page load

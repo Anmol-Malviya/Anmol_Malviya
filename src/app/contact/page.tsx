@@ -29,7 +29,7 @@ export default function Contact() {
     try {
       // Using FormSubmit.co as a free, no-backend form handler.
       // Replace 'anmolcloud7@gmail.com' with your actual email if needed.
-      const res = await fetch('https://formsubmit.co/ajax/anmolcloud7@gmail.com', {
+      const res = await fetch('https://formsubmit.co/ajax/anmolmalviya4328@gmail.com', {
         method: 'POST',
         headers: { Accept: 'application/json' },
         body: data,
@@ -76,11 +76,11 @@ export default function Contact() {
               <div className="contact-direct">
                 <div className="direct-item">
                   <span className="direct-label">Email</span>
-                  <a href="mailto:anmolcloud7@gmail.com">anmolcloud7@gmail.com</a>
+                  <a href="mailto:anmolmalviya4328@gmail.com">anmolmalviya4328@gmail.com</a>
                 </div>
                 <div className="direct-item">
                   <span className="direct-label">Location</span>
-                  <span>Based in India, Worldwide</span>
+                  <span>Madhya Pradesh, India</span>
                 </div>
               </div>
             </div>

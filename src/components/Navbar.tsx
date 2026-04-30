@@ -55,7 +55,7 @@ export default function Navbar() {
           style={{ width: `${scrollProgress}%` }}
         />
 
-        <div className="logo cursor-pointer group">
+        <div className="logo cursor-pointer group" data-magnetic>
           <div className="logo-container">
             <p className="mn text-white transition-all duration-300 group-hover:scale-105 group-hover:text-accent1">
               <Link href="/">A <span className="text-accent2">✦</span> M</Link>
@@ -71,7 +71,7 @@ export default function Navbar() {
           <p className="clock-text font-mono text-[11px] text-accent2 tracking-widest opacity-90">{time}</p>
         </div>
 
-        <div className="menu-toggle-btn group hover:bg-white/5 active:scale-95 transition-all text-white" role="button" aria-label="Toggle Menu">
+        <div className="menu-toggle-btn group hover:bg-white/5 active:scale-95 transition-all text-white" role="button" aria-label="Toggle Menu" data-magnetic>
           <div className="menu-toggle-btn-wrapper">
             <p className="mn open-label text-[11px] uppercase tracking-wider">Menu</p>
             <p className="mn close-label text-[11px] uppercase tracking-wider">Close</p>

@@ -76,7 +76,7 @@ export default function Home() {
           <div className="hero-footer">
             <div className="hero-footer-symbols">
               <div className="social-icons">
-                <a href="https://github.com/Anmol-Malviya" target="_blank" rel="noreferrer" className="social-icon" aria-label="Github">
+                <a href="https://github.com/Anmol-Malviya" target="_blank" rel="noreferrer" className="social-icon" aria-label="Github" data-magnetic>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path
@@ -84,7 +84,7 @@ export default function Home() {
                     </path>
                   </svg>
                 </a>
-                <a href="https://www.linkedin.com/in/anmol-malviya27/" target="_blank" rel="noreferrer" className="social-icon" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/anmol-malviya27/" target="_blank" rel="noreferrer" className="social-icon" aria-label="LinkedIn" data-magnetic>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
@@ -92,7 +92,7 @@ export default function Home() {
                     <circle cx="4" cy="4" r="2"></circle>
                   </svg>
                 </a>
-                <a href="https://www.instagram.com/anmol_20_7_/?hl=en" target="_blank" rel="noreferrer" className="social-icon" aria-label="Instagram">
+                <a href="https://www.instagram.com/anmol_20_7_/?hl=en" target="_blank" rel="noreferrer" className="social-icon" aria-label="Instagram" data-magnetic>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
@@ -103,7 +103,7 @@ export default function Home() {
               </div>
             </div>
             <div className="hero-footer-scroll-down">
-              <p className="mn"><a href="/resume.pdf" target="_blank" rel="noreferrer" className="resume-link"> Fetch // Resume</a></p>
+              <p className="mn"><a href="/resume.pdf" target="_blank" rel="noreferrer" className="resume-link" data-magnetic> Fetch // Resume</a></p>
             </div>
             <div className="hero-footer-tags">
               <p className="mn">Showcase Mode: ON </p>
@@ -120,7 +120,7 @@ export default function Home() {
               </div>
               <div className="resume-title">
                 <h3>Anmol Malviya</h3>
-                <p>Full Stack Engineer &amp; UI/UX</p>
+                <p>Senior Full Stack + AI Developer</p>
               </div>
               <div className="resume-badge">PRO</div>
             </div>
@@ -129,9 +129,9 @@ export default function Home() {
               <div className="resume-section">
                 <h4>Top Tech Stack</h4>
                 <div className="resume-tags">
-                  <span>React / Next.js</span>
-                  <span>Node.js</span>
-                  <span>GSAP</span>
+                  <span>MERN / Next.js</span>
+                  <span>React Native / Flutter</span>
+                  <span>AI &amp; GSAP</span>
                 </div>
               </div>
 
@@ -143,12 +143,12 @@ export default function Home() {
                     <span className="project-tech">Full-Stack / AI</span>
                   </div>
                   <div className="resume-project">
-                    <span className="project-name">TaskFlow Dashboard</span>
-                    <span className="project-tech">Web Design / Data</span>
+                    <span className="project-name">Dev Market</span>
+                    <span className="project-tech">Web Design / Frontend</span>
                   </div>
                   <div className="resume-project">
-                    <span className="project-name">FinTech Web3 App</span>
-                    <span className="project-tech">Mobile / Web3</span>
+                    <span className="project-name">LUX Store</span>
+                    <span className="project-tech">E-commerce / Design</span>
                   </div>
                 </div>
               </div>
@@ -180,10 +180,7 @@ export default function Home() {
             </div>
             <div className="about-hero-bio">
               <p className="ss">
-                Hi, I&apos;m Anmol Malviya. I&apos;m a designer and full-stack developer who&apos;s obsessed with creating
-                award-worthy digital experiences. From crafting pixel-perfect interfaces
-                to architecting robust backend systems, I live at the intersection where
-                beautiful design meets clean code.
+                I&apos;m Anmol Malviya, a Senior Full Stack + AI Developer focused on building scalable web applications, mobile apps, and modern digital experiences. Currently pursuing B.Tech at PIEMR Indore, I specialize in bridging the gap between complex engineering and elegant design.
               </p>
               <p className="mn">Code / Design / Craft / Repeat</p>
             </div>
@@ -229,7 +226,7 @@ export default function Home() {
           </div>
           <div className="featured-work-indicator"></div>
           <div className="featured-work-footer">
-            <p className="mn">Project Portfolio [ 10 ]</p>
+            <p className="mn">Project Portfolio [ 06 ]</p>
             <p className="mn">///////////////////</p>
             <p className="mn"><Link href="/work">View All Projects</Link></p>
           </div>
@@ -313,8 +310,8 @@ export default function Home() {
                   <span className="stat-label">Projects</span>
                 </div>
                 <div className="contact-stat">
-                  <span className="stat-value">3+</span>
-                  <span className="stat-label">Years Exp.</span>
+                  <span className="stat-value">Senior</span>
+                  <span className="stat-label">Developer</span>
                 </div>
                 <div className="contact-stat">
                   <span className="stat-value">100%</span>

@@ -59,111 +59,84 @@ export default function Work() {
 
         <section className="work-items">
             <div className="row">
-                <div className="work-item">
+                <a href="https://devmarket-three.vercel.app/" target="_blank" rel="noreferrer" className="work-item">
                     <div className="work-item-img">
-                        <img src="/images/projects/project-1.png" alt="Anmol Malviya - Interactive Portfolio built with Next.js and GSAP" loading="lazy" />
+                        <img src="/images/projects/Dev-Market.png" alt="Dev Market - Marketplace Platform" loading="lazy" />
                     </div>
                     <div className="work-item-content">
-                        <h2>Interactive Portfolio</h2>
+                        <h2>Dev Market</h2>
                         <div className="work-item-meta">
                             <p className="mn">01</p>
-                            <p className="mn">Frontend / GSAP</p>
+                            <p className="mn">Marketplace / Frontend</p>
                         </div>
                     </div>
-                </div>
-                <div className="work-item">
+                </a>
+                <a href="https://minimal-portfolio-zeta-blush.vercel.app/" target="_blank" rel="noreferrer" className="work-item">
                     <div className="work-item-img">
-                        <img src="/images/projects/project-2.png" alt="AI Interviewer - Full-Stack AI App by Anmol Malviya" loading="lazy" />
+                        <img src="/images/projects/Minimalportfolio.png" alt="Minimal Portfolio - Designer Portfolio" loading="lazy" />
+                    </div>
+                    <div className="work-item-content">
+                        <h2>Minimal Portfolio</h2>
+                        <div className="work-item-meta">
+                            <p className="mn">02</p>
+                            <p className="mn">Design / Frontend</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div className="row">
+                <a href="https://raw-coder.vercel.app/" target="_blank" rel="noreferrer" className="work-item">
+                    <div className="work-item-img">
+                        <img src="/images/projects/AI-Interviewer.png" alt="AI Interviewer - SaaS Platform" loading="lazy" />
                     </div>
                     <div className="work-item-content">
                         <h2>AI Interviewer</h2>
                         <div className="work-item-meta">
-                            <p className="mn">02</p>
+                            <p className="mn">03</p>
                             <p className="mn">Full-Stack / AI</p>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div className="row">
-                <div className="work-item">
+                </a>
+                <a href="https://deforastration.vercel.app/" target="_blank" rel="noreferrer" className="work-item">
                     <div className="work-item-img">
-                        <img src="/images/projects/project-3.png" alt="TaskFlow Data Dashboard Web Design by Anmol Malviya" loading="lazy" />
+                        <img src="/images/projects/Deforestration.png" alt="Deforestation Tracker - Data Visualization" loading="lazy" />
                     </div>
                     <div className="work-item-content">
-                        <h2>TaskFlow Dashboard</h2>
-                        <div className="work-item-meta">
-                            <p className="mn">03</p>
-                            <p className="mn">Web Design / Data</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="work-item">
-                    <div className="work-item-img">
-                        <img src="/images/projects/project-4.png" alt="React and Node.js E-Commerce Platform by Anmol Malviya" loading="lazy" />
-                    </div>
-                    <div className="work-item-content">
-                        <h2>E-Commerce Platform</h2>
+                        <h2>Deforestation Tracker</h2>
                         <div className="work-item-meta">
                             <p className="mn">04</p>
-                            <p className="mn">React / Node.js</p>
+                            <p className="mn">Data / Visualization</p>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <div className="row">
-                <div className="work-item">
+                <a href="https://luxe-vert-eta.vercel.app/" target="_blank" rel="noreferrer" className="work-item">
                     <div className="work-item-img">
-                        <img src="/images/projects/project-5.png" alt="UI/UX Branding for Creative Agency by Anmol Malviya" loading="lazy" />
+                        <img src="/images/projects/LUX.png" alt="LUX Store - E-commerce Concept" loading="lazy" />
                     </div>
                     <div className="work-item-content">
-                        <h2>Creative Agency</h2>
+                        <h2>LUX Store</h2>
                         <div className="work-item-meta">
                             <p className="mn">05</p>
-                            <p className="mn">UI/UX / Branding</p>
+                            <p className="mn">E-commerce / Design</p>
                         </div>
                     </div>
-                </div>
-                <div className="work-item">
+                </a>
+                <a href="https://ogeditor2.onrender.com/" target="_blank" rel="noreferrer" className="work-item">
                     <div className="work-item-img">
-                        <img src="/images/projects/project-6.png" alt="Mobile Web3 FinTech App Development by Anmol Malviya" loading="lazy" />
+                        <img src="/images/projects/Vedio-Editor-Portfolio.png" alt="Video Editor Portfolio" loading="lazy" />
                     </div>
                     <div className="work-item-content">
-                        <h2>FinTech App</h2>
+                        <h2>Video Editor</h2>
                         <div className="work-item-meta">
                             <p className="mn">06</p>
-                            <p className="mn">Mobile / Web3</p>
+                            <p className="mn">Video / Tooling</p>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div className="row">
-                <div className="work-item">
-                    <div className="work-item-img">
-                        <img src="/images/projects/project-7.png" alt="System Architecture for Social Connect App by Anmol Malviya" loading="lazy" />
-                    </div>
-                    <div className="work-item-content">
-                        <h2>Social Connect</h2>
-                        <div className="work-item-meta">
-                            <p className="mn">07</p>
-                            <p className="mn">System Architecture</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="work-item">
-                    <div className="work-item-img">
-                        <img src="/images/projects/project-8.png" alt="Graphic Design and Brand Identity by Anmol Malviya" loading="lazy" />
-                    </div>
-                    <div className="work-item-content">
-                        <h2>Brand Identity</h2>
-                        <div className="work-item-meta">
-                            <p className="mn">08</p>
-                            <p className="mn">Graphic Design</p>
-                        </div>
-                    </div>
-                </div>
+                </a>
             </div>
         </section>
 
