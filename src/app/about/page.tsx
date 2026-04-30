@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Shield, Cpu, Briefcase, Award, Trophy, Medal } from 'lucide-react';
+import { Shield, Cpu, Briefcase, Award, Trophy, Medal, Database, Sparkles, Zap, ArrowLeft, ArrowRight } from 'lucide-react';
 
 export default function About() {
   useEffect(() => {
@@ -204,33 +204,72 @@ export default function About() {
         <section className="about-internships certifications">
           <div className="cert-header">
             <p className="mn">// Practical Training</p>
-            <h2>Internships & Roles</h2>
+            <h2 className="header-split">
+              <span>Internships</span>
+              <span className="outline-text">& Roles</span>
+            </h2>
           </div>
 
-          <div className="cert-list">
-            <a href="/certifications/eventdhara-offer-letter.pdf" target="_blank" rel="noopener noreferrer" className="cert-item" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div className="cert-info">
-                <h3>Data Science Intern</h3>
-                <p className="mn">EventDhara · 3 Months</p>
+          <div className="internship-grid">
+            <div className="intern-card">
+              <div className="intern-icon">
+                <Database size={32} strokeWidth={1.5} />
               </div>
-              <div className="cert-date mn">View Offer ↗</div>
-            </a>
+              <div className="intern-content">
+                <div className="intern-main">
+                  <h3>Data Science Intern</h3>
+                  <p className="mn">EventDhara · 3 Months</p>
+                </div>
+                <ul className="ss">
+                  <li>Worked on advanced data science projects and data analysis</li>
+                  <li>Implemented predictive models and data visualization workflows</li>
+                </ul>
+                <div className="intern-footer">
+                  <span className="mn date">Feb 2026 - Present</span>
+                  <a href="/certifications/eventdhara-offer-letter.pdf" target="_blank" rel="noopener noreferrer" className="mn view-link">View Offer ↗</a>
+                </div>
+              </div>
+            </div>
 
-            <a href="/certifications/nexisparkx-internship-cert.pdf" target="_blank" rel="noopener noreferrer" className="cert-item" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div className="cert-info">
-                <h3>AI Trainee Intern</h3>
-                <p className="mn">NexisparkX Technologies · 2 Months</p>
+            <div className="intern-card">
+              <div className="intern-icon">
+                <Sparkles size={32} strokeWidth={1.5} />
               </div>
-              <div className="cert-date mn">View Cert ↗</div>
-            </a>
+              <div className="intern-content">
+                <div className="intern-main">
+                  <h3>AI Trainee Intern</h3>
+                  <p className="mn">NexisparkX Technologies · 2 Months</p>
+                </div>
+                <ul className="ss">
+                  <li>Developed and optimized Machine Learning models</li>
+                  <li>Handled data preprocessing, cleaning, and model debugging</li>
+                </ul>
+                <div className="intern-footer">
+                  <span className="mn date">Mar 2026 - May 2026</span>
+                  <a href="/certifications/nexisparkx-internship-cert.pdf" target="_blank" rel="noopener noreferrer" className="mn view-link">View Cert ↗</a>
+                </div>
+              </div>
+            </div>
 
-            <a href="/certifications/kamarta-internship-cert.pdf" target="_blank" rel="noopener noreferrer" className="cert-item" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div className="cert-info">
-                <h3>Field Tech Executive</h3>
-                <p className="mn">Kamarta Robotics · Networking & Troubleshooting</p>
+            <div className="intern-card">
+              <div className="intern-icon">
+                <Zap size={32} strokeWidth={1.5} />
               </div>
-              <div className="cert-date mn">View Cert ↗</div>
-            </a>
+              <div className="intern-content">
+                <div className="intern-main">
+                  <h3>Field Tech Executive</h3>
+                  <p className="mn">Kamarta Robotics · 2025</p>
+                </div>
+                <ul className="ss">
+                  <li>Specialized in networking and hardware troubleshooting</li>
+                  <li>Managed system maintenance and technical infrastructure</li>
+                </ul>
+                <div className="intern-footer">
+                  <span className="mn date">Aug 2025 - 2026</span>
+                  <a href="/certifications/kamarta-internship-cert.pdf" target="_blank" rel="noopener noreferrer" className="mn view-link">View Cert ↗</a>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -337,59 +376,67 @@ export default function About() {
         {/* Certifications Section */}
         <section className="certifications-premium">
           <div className="cert-header">
-            <p className="mn">// Validation & Expertise</p>
-            <h2 className="header-split">
-              <span>Certifications</span>
-              <span className="outline-text">& Credentials</span>
-            </h2>
+            <div className="cert-header-main">
+              <p className="mn">// Validation & Expertise</p>
+              <h2 className="header-split">
+                <span>Certifications</span>
+                <span className="outline-text">& Credentials</span>
+              </h2>
+            </div>
           </div>
 
-          <div className="cert-bento-grid">
-            <div className="cert-card large">
-              <div className="cert-noise"></div>
-              <div className="cert-badge">
-                <Shield size={24} strokeWidth={1.5} />
+          <div className="cert-slider-container">
+            <div className="cert-track">
+              <div className="cert-card featured">
+                <div className="cert-noise"></div>
+                <div className="cert-badge">
+                  <Shield size={24} strokeWidth={1.5} />
+                </div>
+                <div className="cert-card-content">
+                  <p className="mn card-tag">MPSSDEGB & IIT Jodhpur</p>
+                  <h3>Cyber Security <br/> Excellence Program</h3>
+                  <p className="ss">Comprehensive program by IIT Jodhpur Technology Innovation & Start-up Centre (TISC).</p>
+                </div>
+                <div className="cert-card-footer">
+                  <div className="cert-date mn">Class of 2025</div>
+                  <a href="/certifications/cyber-security-excellence-cert.pdf" target="_blank" rel="noopener noreferrer" className="cert-view mn" style={{ textDecoration: 'none' }}>View Certificate ↗</a>
+                </div>
               </div>
-              <div className="cert-card-main">
-                <p className="mn card-tag">MPSSDEGB & IIT Jodhpur</p>
-                <h3>Cyber Security <br/> Excellence Program</h3>
-                <p className="ss">Comprehensive program by IIT Jodhpur Technology Innovation & Start-up Centre (TISC).</p>
-              </div>
-              <div className="cert-card-footer">
-                <div className="cert-date mn">Class of 2025</div>
-                <a href="/certifications/cyber-security-excellence-cert.pdf" target="_blank" rel="noopener noreferrer" className="cert-view mn" style={{ textDecoration: 'none' }}>View Certificate ↗</a>
-              </div>
-            </div>
 
-            <div className="cert-card small">
-              <div className="cert-noise"></div>
-              <div className="cert-badge">
-                <Cpu size={24} strokeWidth={1.5} />
+              <div className="cert-card">
+                <div className="cert-noise"></div>
+                <div className="cert-badge">
+                  <Cpu size={24} strokeWidth={1.5} />
+                </div>
+                <div className="cert-card-content">
+                  <p className="mn card-tag">Workshop</p>
+                  <h3>Prompt <br/> Engineering</h3>
+                  <p className="ss">Neurons School of Innovation & AI. Explored cutting-edge advancements.</p>
+                </div>
+                <div className="cert-card-footer">
+                  <div className="cert-date mn">Workshop</div>
+                  <a href="/certifications/prompt-engineering-cert.pdf" target="_blank" rel="noopener noreferrer" className="cert-view mn" style={{ textDecoration: 'none' }}>Verify ↗</a>
+                </div>
               </div>
-              <div className="cert-card-content">
-                <p className="mn card-tag">Workshop</p>
-                <h3>Prompt <br/> Engineering</h3>
-                <p className="ss">Neurons School of Innovation & AI. Explored cutting-edge advancements.</p>
-              </div>
-              <a href="/certifications/prompt-engineering-cert.pdf" target="_blank" rel="noopener noreferrer" className="cert-view-small mn" style={{ textDecoration: 'none' }}>Verify ↗</a>
-            </div>
 
-            <div className="cert-card small">
-              <div className="cert-noise"></div>
-              <div className="cert-badge">
-                <Briefcase size={24} strokeWidth={1.5} />
+              <div className="cert-card">
+                <div className="cert-noise"></div>
+                <div className="cert-badge">
+                  <Briefcase size={24} strokeWidth={1.5} />
+                </div>
+                <div className="cert-card-content">
+                  <p className="mn card-tag">HostKash</p>
+                  <h3>Summer <br/> Internship</h3>
+                  <p className="ss">Successfully completed a 4-week internship program.</p>
+                </div>
+                <div className="cert-card-footer">
+                  <div className="cert-date mn">Internship</div>
+                  <a href="/certifications/hostkash-internship-cert.pdf" target="_blank" rel="noopener noreferrer" className="cert-view mn" style={{ textDecoration: 'none' }}>Verify ↗</a>
+                </div>
               </div>
-              <div className="cert-card-content">
-                <p className="mn card-tag">HostKash</p>
-                <h3>Summer <br/> Internship</h3>
-                <p className="ss">Successfully completed a 4-week internship program.</p>
-              </div>
-              <a href="/certifications/hostkash-internship-cert.pdf" target="_blank" rel="noopener noreferrer" className="cert-view-small mn" style={{ textDecoration: 'none' }}>Verify ↗</a>
-            </div>
 
-            <div className="cert-card medium">
-              <div className="cert-noise"></div>
-              <div className="cert-card-flex">
+              <div className="cert-card featured">
+                <div className="cert-noise"></div>
                 <div className="cert-badge">
                   <Award size={24} strokeWidth={1.5} />
                 </div>
@@ -398,10 +445,42 @@ export default function About() {
                   <h3>UNXT Soft Skill Program</h3>
                   <p className="ss">165 hours of training in Spoken English, Employability, and Life Skills.</p>
                 </div>
+                <div className="cert-card-footer">
+                  <div className="cert-date mn">Certified 2024</div>
+                  <a href="/certifications/unxt-soft-skill-program.pdf" target="_blank" rel="noopener noreferrer" className="cert-view mn" style={{ textDecoration: 'none' }}>View ↗</a>
+                </div>
               </div>
-              <div className="cert-card-footer">
-                <div className="cert-date mn">Certified 2024</div>
-                <a href="/certifications/UNXT-Soft-Skill-Program.pdf" target="_blank" rel="noopener noreferrer" className="cert-view mn" style={{ textDecoration: 'none' }}>View ↗</a>
+
+              <div className="cert-card">
+                <div className="cert-noise"></div>
+                <div className="cert-badge">
+                  <Trophy size={24} strokeWidth={1.5} />
+                </div>
+                <div className="cert-card-content">
+                  <p className="mn card-tag">Assessment</p>
+                  <h3>Self Growth <br/> Report</h3>
+                  <p className="ss">Comprehensive analysis of professional and personal development milestones.</p>
+                </div>
+                <div className="cert-card-footer">
+                  <div className="cert-date mn">Assessment</div>
+                  <a href="/certifications/self-growth-report.pdf" target="_blank" rel="noopener noreferrer" className="cert-view mn" style={{ textDecoration: 'none' }}>View ↗</a>
+                </div>
+              </div>
+
+              <div className="cert-card featured">
+                <div className="cert-noise"></div>
+                <div className="cert-badge">
+                  <Cpu size={24} strokeWidth={1.5} />
+                </div>
+                <div className="cert-card-content">
+                  <p className="mn card-tag">Hackathon</p>
+                  <h3>KRIYETA 5.0 <br/> Participation</h3>
+                  <p className="ss">Demonstrated excellence in innovation at a 36-hour long hackathon.</p>
+                </div>
+                <div className="cert-card-footer">
+                  <div className="cert-date mn">Jan 2025</div>
+                  <a href="/certifications/kriyeta-participation.pdf" target="_blank" rel="noopener noreferrer" className="cert-view mn" style={{ textDecoration: 'none' }}>View ↗</a>
+                </div>
               </div>
             </div>
           </div>

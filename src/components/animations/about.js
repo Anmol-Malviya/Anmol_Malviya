@@ -238,42 +238,81 @@ export default function init() {
       });
     });
 
-    // Certifications reveal animation (Per-section for better reliability)
-    const certSections = document.querySelectorAll(".certifications, .certifications-premium");
-    certSections.forEach((section) => {
-      const items = section.querySelectorAll(".cert-item, .cert-card");
-      if (items.length > 0) {
-        const certAnimation = gsap.fromTo(
-          items,
-          {
-            y: 50,
-            opacity: 0,
-            scale: 0.9
-          },
-          {
-            y: 0,
-            opacity: 1,
-            scale: 1,
-            stagger: 0.15,
-            duration: 1,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: section,
-              start: "top 90%",
-              toggleActions: "play none none none",
-              onEnter: () => {
-                // Ensure visibility if something went wrong
-                gsap.set(items, { opacity: 1, visibility: "visible" });
-              }
-            },
-            overwrite: true
-          }
-        );
-        if (certAnimation.scrollTrigger) {
-          scrollTriggerInstances.push(certAnimation.scrollTrigger);
+    // Uniform Size with Depth Blur Loop
+    const certTrack = document.querySelector(".cert-track");
+    const certContainer = document.querySelector(".cert-slider-container");
+
+    if (certTrack && certContainer) {
+      // Clone cards for infinite loop
+      const cards = Array.from(certTrack.children);
+      cards.forEach(card => {
+        const clone = card.cloneNode(true);
+        certTrack.appendChild(clone);
+      });
+
+      const totalWidth = certTrack.scrollWidth;
+      const originalWidth = totalWidth / 2;
+      const allCards = certTrack.querySelectorAll(".cert-card");
+
+      const setters = Array.from(allCards).map(card => ({
+        filter: gsap.quickSetter(card, "filter"),
+        opacity: gsap.quickSetter(card, "opacity")
+      }));
+
+      const loop = gsap.to(certTrack, {
+        x: -originalWidth,
+        duration: 35,
+        ease: "none",
+        repeat: -1,
+        onUpdate: () => {
+          const containerRect = certContainer.getBoundingClientRect();
+          const containerLeft = containerRect.left;
+          const containerWidth = containerRect.width;
+
+          allCards.forEach((card, i) => {
+            const cardRect = card.getBoundingClientRect();
+            const cardCenter = cardRect.left + cardRect.width / 2;
+            
+            let progress = (cardCenter - containerLeft) / containerWidth;
+            
+            // Focus on the center area (0.5)
+            const focusPoint = 0.5;
+            const distFromFocus = Math.abs(progress - focusPoint);
+
+            // Blur: Cards at edges get blurred
+            const blur = Math.max(0, (distFromFocus - 0.2) * 15);
+            // Opacity: Cards at edges fade slightly
+            const opacity = 1 - (distFromFocus * 0.5);
+
+            setters[i].filter(`blur(${blur}px)`);
+            setters[i].opacity(opacity);
+          });
         }
-      }
-    });
+      });
+
+      // Simple Hover Interaction
+      allCards.forEach(card => {
+        card.addEventListener("mouseenter", () => {
+          loop.pause();
+          gsap.to(card, {
+            y: -10,
+            borderColor: "rgba(108, 99, 255, 0.4)",
+            duration: 0.4,
+            filter: "blur(0px)",
+            opacity: 1,
+            overwrite: true
+          });
+        });
+        card.addEventListener("mouseleave", () => {
+          loop.play();
+          gsap.to(card, {
+            y: 0,
+            borderColor: "rgba(255, 255, 255, 0.05)",
+            duration: 0.4
+          });
+        });
+      });
+    }
     // Refresh ScrollTrigger to ensure all markers and triggers are correct
     ScrollTrigger.refresh();
   };

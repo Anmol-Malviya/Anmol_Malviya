@@ -1075,31 +1075,176 @@
   box-shadow: 0 10px 20px rgba(108, 99, 255, 0.3);
 }
 
-/* 3. Certifications - Minimalist Glass Bento (Existing updated) */
-.certifications-premium .cert-card {
-  /* Minimalist refinements */
-  background: rgba(10, 10, 10, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.03);
+/* 3. Certifications - Infinite Autoplay Slider */
+.certifications-premium {
+  padding: 8em 0; /* Vertical padding only, let track fill width */
+  background: #050505;
+  position: relative;
+  overflow: hidden;
 }
 
-.certifications-premium .cert-card:hover {
-  background: rgba(15, 15, 15, 0.8);
-  border-color: var(--accent1);
+.cert-header {
+  margin-bottom: 4em;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 4em;
+}
+
+.cert-header-main h2 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.1;
+  margin-top: 0.2em;
+}
+
+.cert-slider-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 4em 0;
+  position: relative;
+  /* Edge Fading Mask */
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.cert-track {
+  display: flex;
+  gap: 3em;
+  width: max-content;
+  will-change: transform;
+}
+
+.cert-card {
+  width: 400px;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 2em;
+  padding: 2.5em;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cert-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(108, 99, 255, 0.4);
+  transform: scale(1.05);
+  z-index: 10;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
 }
 
 .cert-badge {
-  width: 50px; /* Reduced from 60px */
-  height: 50px;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 16px;
+  width: 54px;
+  height: 54px;
+  background: rgba(108, 99, 255, 0.1);
+  border: 1px solid rgba(108, 99, 255, 0.2);
+  border-radius: 1.2em;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--accent1);
+  transition: all 0.4s ease;
+}
+
+.cert-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  flex-grow: 1;
+}
+
+.cert-card h3 {
   font-size: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  position: relative;
-  z-index: 2;
-  transition: all 0.5s ease;
+  line-height: 1.3;
+  font-weight: 800;
+  margin: 0.2em 0;
+}
+
+.cert-card-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5em;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cert-date {
+  font-size: 0.8rem;
+  opacity: 0.4;
+  font-weight: 700;
+}
+
+.cert-view, .cert-view-small {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--accent1);
+  padding: 0.6em 1.2em;
+  background: rgba(108, 99, 255, 0.08);
+  border-radius: 100px;
+  border: 1px solid rgba(108, 99, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.cert-view:hover, .cert-view-small:hover {
+  background: var(--accent1);
+  color: white;
+  box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
+}
+
+/* Media Queries for Slider */
+@media (max-width: 768px) {
+  .certifications-premium {
+    padding: 6em 2em;
+  }
+  .cert-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2em;
+  }
+  .cert-track {
+    padding: 0 2em;
+  }
+  .cert-card {
+    width: 85vw;
+    padding: 2.5em;
+  }
+}
+
+/* Featured Certification Highlight */
+.cert-card.featured {
+  background: rgba(108, 99, 255, 0.05);
+  border: 1.5px solid var(--accent1);
+  box-shadow: 0 0 30px rgba(108, 99, 255, 0.15);
+}
+
+.cert-card.featured::before {
+  content: 'VERIFIED CREDENTIAL';
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 0.55rem;
+  font-weight: 800;
+  color: var(--accent1);
+  letter-spacing: 0.15em;
+  padding: 0.5em 1em;
+  background: rgba(108, 99, 255, 0.1);
+  border: 1px solid rgba(108, 99, 255, 0.2);
+  border-radius: 100px;
+  z-index: 5;
+  text-transform: uppercase;
+}
+
+.cert-card.featured .cert-badge {
+  background: var(--accent1);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 0 20px rgba(108, 99, 255, 0.4);
 }
 
 .cert-card:hover .cert-badge {
@@ -1108,19 +1253,6 @@
   border-color: var(--accent1);
   color: white;
   box-shadow: 0 10px 20px rgba(108, 99, 255, 0.3);
-}
-
-.cert-card h3 {
-  font-size: clamp(1.3rem, 2vw, 1.8rem); /* Slightly smaller */
-  font-weight: 800;
-  margin: 0.2em 0 0.5em 0;
-  color: var(--fg);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-}
-
-.cert-card.large h3 {
-  font-size: clamp(1.6rem, 3vw, 2.4rem); /* Reduced from 3rem */
 }
 
 .cert-card p.ss {
@@ -1141,14 +1273,7 @@
   opacity: 0.8;
 }
 
-.cert-date {
-  font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.4);
-  font-weight: 600;
-  letter-spacing: 0.1em;
-}
-
-.cert-view, .cert-view-small {
+.cert-view {
   font-size: 0.75rem;
   color: var(--accent1);
   font-weight: 700;
@@ -1158,36 +1283,19 @@
   cursor: pointer;
 }
 
-.cert-view-small {
-  margin-top: 1.5em;
-  display: block;
-}
-
-.cert-card:hover .cert-view, 
-.cert-card:hover .cert-view-small {
+.cert-card:hover .cert-view {
   transform: translateX(5px);
   color: white;
   text-shadow: 0 0 10px var(--accent1);
-}
-
-@media (max-width: 1100px) {
-  .cert-bento-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: auto;
-  }
 }
 
 @media (max-width: 768px) {
   .certifications-premium {
     padding: 6em 1.5em;
   }
-  .cert-card.large, .cert-card.medium, .cert-card.small {
-    grid-column: span 1;
+  .cert-card {
+    width: 85vw;
     padding: 2em;
-  }
-  .cert-card-flex {
-    flex-direction: column;
-    gap: 1em;
   }
   .header-split span:first-child,
   .header-split .outline-text {
@@ -1235,4 +1343,171 @@
 
 .cert-item:hover .ss li {
   color: rgba(255, 255, 255, 1);
+}
+
+/* Internship Grid Styles */
+.internship-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 2.5em;
+  width: 100%;
+}
+
+.intern-card {
+  display: flex;
+  gap: 2em;
+  padding: 3.5em 3em;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 3em;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+}
+
+.intern-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top left, rgba(108, 99, 255, 0.05), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.intern-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(108, 99, 255, 0.3);
+  transform: translateY(-10px);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+}
+
+.intern-card:hover::before {
+  opacity: 1;
+}
+
+.intern-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 1.5em;
+  background: rgba(108, 99, 255, 0.08);
+  border: 1px solid rgba(108, 99, 255, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--accent1);
+  flex-shrink: 0;
+  transition: all 0.4s ease;
+}
+
+.intern-card:hover .intern-icon {
+  background: var(--accent1);
+  color: white;
+  transform: rotate(10deg) scale(1.1);
+  box-shadow: 0 10px 20px rgba(108, 99, 255, 0.3);
+}
+
+.intern-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75em;
+  flex: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.intern-main h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.3em;
+  color: var(--fg);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.intern-content ul.ss {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+
+.intern-content ul.ss li {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.6);
+  position: relative;
+  padding-left: 1.8em;
+  line-height: 1.6;
+}
+
+.intern-content ul.ss li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent1);
+  font-weight: 900;
+  transition: transform 0.3s ease;
+}
+
+.intern-card:hover ul.ss li::before {
+  transform: translateX(5px);
+}
+
+.intern-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 1.75em;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.intern-footer .date {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 500;
+}
+
+.intern-footer .view-link {
+  font-size: 0.75rem;
+  color: var(--accent1);
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  padding: 0.5em 1em;
+  background: rgba(108, 99, 255, 0.05);
+  border-radius: 100px;
+  border: 1px solid rgba(108, 99, 255, 0.1);
+}
+
+.intern-footer .view-link:hover {
+  background: var(--accent1);
+  color: white;
+  transform: scale(1.05);
+}
+
+@media (max-width: 1100px) {
+  .internship-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .intern-card {
+    flex-direction: column;
+    padding: 2.5em 2em;
+    gap: 1.5em;
+  }
+
+  .intern-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .intern-main h3 {
+    font-size: 1.5rem;
+  }
 }
