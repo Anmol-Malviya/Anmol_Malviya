@@ -231,6 +231,7 @@ export default function About() {
               </div>
             </div>
 
+{/* 
             <div className="intern-card">
               <div className="intern-icon">
                 <Sparkles size={32} strokeWidth={1.5} />
@@ -250,6 +251,7 @@ export default function About() {
                 </div>
               </div>
             </div>
+            */}
 
             <div className="intern-card">
               <div className="intern-icon">
